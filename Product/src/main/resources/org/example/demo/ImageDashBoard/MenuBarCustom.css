@@ -1,0 +1,13 @@
+.scroll-pane {
+    -fx-background-color: transparent; /* Xóa nền */
+    -fx-border-color: transparent; /* Xóa viền */
+    -fx-border-width: 0;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent; /* Làm nền trong suốt */
+}
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-opacity: 100;  /* Ẩn thanh cuộn */
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
