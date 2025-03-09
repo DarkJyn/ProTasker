@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="66.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ImageLoginScreen/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="41.0" prefWidth="120.0" text="PROTASKER">
+                     <font>
+                        <Font name="Evogria" size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ImageDashBoard/overview.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Overview">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Montserrat Medium" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ImageDashBoard/list-check.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Tasks">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Montserrat Medium" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ImageDashBoard/cube.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Project">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Montserrat Medium" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ImageDashBoard/user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Profile">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Montserrat Medium" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="238.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ImageDashBoard/sign-out-alt.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Log Out">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Montserrat Medium" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="600.0" prefWidth="691.0" style="-fx-background-color: #faf9f9;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="345.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+               <children>
+                  <Label text="Sort by">
+                     <font>
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="Target Date">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ImageDashBoard/calendar-check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="Progress">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ImageDashBoard/badge-percent%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="Priority">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ImageDashBoard/priority-arrows.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Line endX="100.0" startX="100.0" startY="30.0" stroke="#6c88c4" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="New Project">
+                     <font>
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ImageDashBoard/plus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="17.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="52.0" prefWidth="691.0">
+               <children>
+                  <Label text="Title">
+                     <font>
+                        <Font name="Plus Jakarta Sans SemiBold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="38.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label />
+                  <Label text="Target Date">
+                     <font>
+                        <Font name="Plus Jakarta Sans SemiBold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Leader">
+                     <font>
+                        <Font name="Plus Jakarta Sans SemiBold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Priority">
+                     <font>
+                        <Font name="Plus Jakarta Sans SemiBold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Progress">
+                     <font>
+                        <Font name="Plus Jakarta Sans SemiBold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="527.0" prefWidth="413.0" stylesheets="@ImageDashBoard/MenuBarCustom.css">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="10.0" />
+               </VBox.margin>
+               <content>
+                  <VBox prefHeight="936.0" prefWidth="666.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@ImageDashBoard/MenuBarCustom.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="Mar 23">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ImageDashBoard/avatar.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="53.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label style="-fx-text-fill: black;" text="Medium">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: black;" text="50%">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>
