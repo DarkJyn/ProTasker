@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.DashBoardController">
    <children>
       <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
          <children>
@@ -68,7 +68,7 @@
                         <Insets left="40.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Tasks">
+                  <Label fx:id="taskLabelInDashBoard" accessibleRole="BUTTON" onMouseClicked="#ontaskLabelInDashBoardClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Tasks">
                      <HBox.margin>
                         <Insets left="15.0" />
                      </HBox.margin>
@@ -88,7 +88,7 @@
                         <Insets left="40.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Project">
+                  <Label fx:id="projectLabelInDashBoard" accessibleRole="BUTTON" onMouseClicked="#onProjectInDashBoardClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Project">
                      <HBox.margin>
                         <Insets left="15.0" />
                      </HBox.margin>
@@ -108,7 +108,7 @@
                         <Insets left="40.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Profile">
+                  <Label fx:id="profileLabelInDashBoard" accessibleRole="BUTTON" onMouseClicked="#onProfileInDashBoardClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Profile">
                      <HBox.margin>
                         <Insets left="15.0" />
                      </HBox.margin>
@@ -128,7 +128,7 @@
                         <Insets left="40.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Log Out">
+                  <Label fx:id="logOut" accessibleRole="BUTTON" onMouseClicked="#onLogOutClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Log Out">
                      <HBox.margin>
                         <Insets left="15.0" />
                      </HBox.margin>
@@ -144,7 +144,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="42.0" prefWidth="345.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                <children>
-                <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="All tasks">
+                <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -159,7 +159,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="Active">
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -174,7 +174,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10;" text="Done">
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>

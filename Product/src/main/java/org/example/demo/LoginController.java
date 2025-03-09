@@ -19,14 +19,13 @@ public class LoginController{
 
     @FXML
     private Button logInButton;
-
     @FXML
-    private Label signUpFromLogIn;
+    private Label signUpScreen;
     @FXML
-    private Label loginTest;
-    @FXML
-    void onSignUpFromLogInClick(MouseEvent event) {
-        loginTest.setText("go to sign up page");
+    void onSignUpScreen(MouseEvent event) throws IOException {
+        Stage stage = (Stage) signUpScreen.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("signup-screen.fxml"));
+        stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
     void onLogInButtonClick(ActionEvent event) throws IOException {

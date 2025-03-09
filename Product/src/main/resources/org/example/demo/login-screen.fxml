@@ -65,7 +65,7 @@
             </Label>
             <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="480.0">
                <children>
-                  <TextField prefHeight="44.0" prefWidth="370.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                  <TextField prefHeight="44.0" prefWidth="370.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
                      <font>
                         <Font name="Montserrat Medium" size="12.0" />
                      </font>
@@ -85,7 +85,7 @@
             </Label>
             <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="480.0">
                <children>
-                  <PasswordField prefHeight="45.0" prefWidth="370.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                  <PasswordField prefHeight="45.0" prefWidth="370.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
                      <font>
                         <Font name="Montserrat Medium" size="12.0" />
                      </font>
@@ -95,7 +95,7 @@
                   </PasswordField>
                </children>
             </HBox>
-            <Button fx:id="logInButton" alignment="CENTER" mnemonicParsing="false" onAction="#onLogInButtonClick" prefHeight="45.0" prefWidth="370.0" style="-fx-background-color: #3674B5; -fx-background-radius: 4;" styleClass="custom-button" stylesheets="@ImageLoginScreen/LoginScreen.css" text="Log in" textFill="WHITE">
+            <Button fx:id="logInButton" alignment="CENTER" mnemonicParsing="false" onAction="#onLogInButtonClick" prefHeight="45.0" prefWidth="370.0" style="-fx-background-color: #3674B5; -fx-background-radius: 4; -fx-cursor: hand;" styleClass="custom-button" stylesheets="@ImageLoginScreen/LoginScreen.css" text="Log in" textFill="WHITE">
                <VBox.margin>
                   <Insets left="50.0" top="50.0" />
                </VBox.margin>
@@ -110,7 +110,7 @@
                         <Font name="Montserrat Medium" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="signUpFromLogIn" accessibleRole="BUTTON" onMouseClicked="#onSignUpFromLogInClick" style="-fx-text-fill: #3674B5;" text="Sign up">
+                  <Label fx:id="signUpScreen" onMouseClicked="#onSignUpScreen" style="-fx-text-fill: #3674B5; -fx-cursor: hand;" text="Sign up">
                      <HBox.margin>
                         <Insets left="5.0" right="10.0" />
                      </HBox.margin>
