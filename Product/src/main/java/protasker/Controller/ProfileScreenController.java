@@ -1,4 +1,4 @@
-package org.example.demo;
+package protasker.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -21,7 +20,7 @@ public class ProfileScreenController {
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) overviewLabelInDashBoard.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("task-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/dash-board.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -35,20 +34,20 @@ public class ProfileScreenController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
     void onProjectClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) projectScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("task-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/ProjectScreen/project-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
     @FXML
     void onTaskClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) taskScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("task-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML

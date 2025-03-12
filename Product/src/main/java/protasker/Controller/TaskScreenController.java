@@ -1,4 +1,4 @@
-package org.example.demo;
+package protasker.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ProjectScreenController {
+public class TaskScreenController {
     @FXML
     private Label overviewLabelInDashBoard;
 
@@ -18,12 +18,12 @@ public class ProjectScreenController {
     private Label profileScreen;
 
     @FXML
-    private Label taskScreen;
+    private Label projectScreen;
 
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) overviewLabelInDashBoard.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("dash-board.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/dash-board.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -31,20 +31,20 @@ public class ProjectScreenController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
     void onProfileScreenClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) profileScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("profile-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/profile-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
     @FXML
-    void onTaskClick(MouseEvent event) throws IOException {
-        Stage stage = (Stage) taskScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("task-screen.fxml"));
+    void onProjectScreenClick(MouseEvent event) throws IOException {
+        Stage stage = (Stage) projectScreen.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/View/ProjectScreen/project-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 }

@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.ProfileScreenController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProfileScreenController">
    <children>
       <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
          <children>
@@ -25,7 +25,7 @@
                <children>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageLoginScreen/logo.png" />
+                        <Image url="@../ImageLoginScreen/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" />
@@ -45,7 +45,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/overview.png" />
+                        <Image url="@../ImageDashBoard/overview.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -65,7 +65,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/list-check.png" />
+                        <Image url="@../ImageDashBoard/list-check.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -85,7 +85,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/cube.png" />
+                        <Image url="@../ImageDashBoard/cube.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -105,7 +105,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/user.png" />
+                        <Image url="@../ImageDashBoard/user.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -125,7 +125,7 @@
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/sign-out-alt.png" />
+                        <Image url="@../ImageDashBoard/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -165,7 +165,7 @@
                <children>
                   <ImageView fx:id="avatarUser" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/avatar.jpg" />
+                        <Image url="@../ImageDashBoard/avatar.jpg" />
                      </image>
                   </ImageView>
                   <StackPane alignment="TOP_LEFT" prefHeight="141.0" prefWidth="260.0">
@@ -255,7 +255,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="39.0" prefWidth="238.0" promptText="User's Name" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                  <TextField prefHeight="39.0" prefWidth="238.0" promptText="User's Name" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@../ImageLoginScreen/PassCustum.css">
                      <HBox.margin>
                         <Insets left="170.0" />
                      </HBox.margin>
@@ -303,7 +303,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <PasswordField prefHeight="39.0" prefWidth="238.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                  <PasswordField prefHeight="39.0" prefWidth="238.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@../ImageLoginScreen/PassCustum.css">
                      <font>
                         <Font name="Montserrat Medium" size="12.0" />
                      </font>
@@ -326,7 +326,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <PasswordField prefHeight="39.0" prefWidth="238.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                  <PasswordField prefHeight="39.0" prefWidth="238.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@../ImageLoginScreen/PassCustum.css">
                      <font>
                         <Font name="Montserrat Medium" size="12.0" />
                      </font>

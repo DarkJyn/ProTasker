@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.DashBoardController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.DashBoardController">
    <children>
       <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
          <children>
@@ -22,7 +22,7 @@
                <children>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageLoginScreen/logo.png" />
+                        <Image url="@../ImageLoginScreen/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" />
@@ -42,7 +42,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/overview.png" />
+                        <Image url="@../ImageDashBoard/overview.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -62,7 +62,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/list-check.png" />
+                        <Image url="@../ImageDashBoard/list-check.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -82,7 +82,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/cube.png" />
+                        <Image url="@../ImageDashBoard/cube.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -102,7 +102,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/user.png" />
+                        <Image url="@../ImageDashBoard/user.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -122,7 +122,7 @@
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/sign-out-alt.png" />
+                        <Image url="@../ImageDashBoard/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="40.0" />
@@ -140,7 +140,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox prefHeight="600.0" prefWidth="414.0" style="-fx-background-color: #faf9f9;">
+      <VBox fx:id="middleVbox" prefHeight="600.0" prefWidth="414.0" style="-fx-background-color: #faf9f9;">
          <children>
             <HBox alignment="CENTER" prefHeight="42.0" prefWidth="345.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                <children>
@@ -154,7 +154,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ImageDashBoard/note.png" />
+                              <Image url="@../ImageDashBoard/note.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -169,7 +169,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ImageDashBoard/clone.png" />
+                              <Image url="@../ImageDashBoard/clone.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -184,7 +184,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ImageDashBoard/checkbox%20(1).png" />
+                              <Image url="@../ImageDashBoard/checkbox%20(1).png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -194,14 +194,14 @@
                   <Insets left="10.0" right="17.0" top="10.0" />
                </VBox.margin>
             </HBox>
-            <ScrollPane prefHeight="527.0" prefWidth="413.0" stylesheets="@ImageDashBoard/MenuBarCustom.css">
+            <ScrollPane prefHeight="527.0" prefWidth="413.0" stylesheets="@../ImageDashBoard/MenuBarCustom.css">
                <VBox.margin>
                   <Insets bottom="15.0" left="10.0" top="15.0" />
                </VBox.margin>
                <content>
-                  <VBox prefHeight="936.0" prefWidth="384.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@ImageDashBoard/MenuBarCustom.css">
+                  <VBox prefHeight="936.0" prefWidth="384.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@../ImageDashBoard/MenuBarCustom.css">
                      <children>
-                        <VBox prefHeight="92.0" prefWidth="382.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="90.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -227,7 +227,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -239,7 +239,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -255,7 +255,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -305,7 +305,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -317,7 +317,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -333,7 +333,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -383,7 +383,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -395,7 +395,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -411,7 +411,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -461,7 +461,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -473,7 +473,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -489,7 +489,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -539,7 +539,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -551,7 +551,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -567,7 +567,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -617,7 +617,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -629,7 +629,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -645,7 +645,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -695,7 +695,7 @@
                                     </VBox>
                                     <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/avatar.jpg" />
+                                          <Image url="@../ImageDashBoard/avatar.jpg" />
                                        </image>
                                        <HBox.margin>
                                           <Insets top="10.0" />
@@ -707,7 +707,7 @@
                                  <children>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/clone.png" />
+                                          <Image url="@../ImageDashBoard/clone.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="25.0" />
@@ -723,7 +723,7 @@
                                     </Label>
                                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/cube.png" />
+                                          <Image url="@../ImageDashBoard/cube.png" />
                                        </image>
                                        <HBox.margin>
                                           <Insets left="100.0" />
@@ -778,7 +778,7 @@
                   </VBox>
                   <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ImageDashBoard/avatar.jpg" />
+                        <Image url="@../ImageDashBoard/avatar.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" />
@@ -855,9 +855,9 @@
             <AnchorPane prefHeight="334.0" prefWidth="279.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="300.0" layoutX="20.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="240.0" />
-                  <ScrollPane layoutX="25.0" layoutY="22.0" prefHeight="274.0" prefWidth="248.0" stylesheets="@ImageDashBoard/MenuBarCustom.css">
+                  <ScrollPane layoutX="25.0" layoutY="22.0" prefHeight="274.0" prefWidth="248.0" stylesheets="@../ImageDashBoard/MenuBarCustom.css">
                      <content>
-                        <VBox prefHeight="389.0" prefWidth="231.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF;" stylesheets="@ImageDashBoard/MenuBarCustom.css">
+                        <VBox prefHeight="389.0" prefWidth="231.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF;" stylesheets="@../ImageDashBoard/MenuBarCustom.css">
                            <children>
                               <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
                                  <children>
@@ -875,7 +875,7 @@
                                     </Label>
                                     <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
+                                          <Image url="@../ImageDashBoard/calendar-day%20(1).png" />
                                        </image>
                                     </ImageView>
                                     <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
@@ -904,210 +904,7 @@
                                     </Label>
                                     <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
-                                       </image>
-                                    </ImageView>
-                                    <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </AnchorPane>
-                              <AnchorPane prefHeight="94.0" prefWidth="230.0" style="-fx-background-color: #141522; -fx-background-radius: 13;">
-                                 <children>
-                                    <Label layoutX="18.0" layoutY="9.0" prefHeight="30.0" prefWidth="130.0" style="-fx-text-fill: #FFFFFF;" text="Project's Name">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans ExtraBold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="360.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent; -fx-opacity: 10;" />
-                                    <Arc fill="DODGERBLUE" layoutX="179.0" layoutY="42.0" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="5.0" style="-fx-fill: transparent;" />
-                                    <Label alignment="CENTER" layoutX="163.0" layoutY="31.0" style="-fx-text-fill: #FFFFFF;" text="50%">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="18.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@ImageDashBoard/calendar-day%20(1).png" />
+                                          <Image url="@../ImageDashBoard/calendar-day%20(1).png" />
                                        </image>
                                     </ImageView>
                                     <Label layoutX="51.0" layoutY="51.0" style="-fx-text-fill: #FFFFFF;" text="Mar 23">

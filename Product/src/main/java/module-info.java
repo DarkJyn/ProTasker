@@ -1,4 +1,4 @@
-module org.example.demo {
+module protasker {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,6 +10,10 @@ module org.example.demo {
     requires eu.hansolo.tilesfx;
     requires java.desktop;
 
-    opens org.example.demo to javafx.fxml;
-    exports org.example.demo;
+    exports protasker;
+    opens protasker to javafx.fxml;
+    exports protasker.Controller;
+    opens protasker.Controller to javafx.fxml;
+    exports protasker.Model;
+    opens protasker.Model to javafx.fxml;
 }

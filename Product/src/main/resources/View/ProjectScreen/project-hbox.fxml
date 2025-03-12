@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="projectHbox" alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectHboxController">
+   <children>
+      <Label fx:id="projectNameLabel" prefHeight="28.0" prefWidth="280.0" text="Project's Name">
+         <font>
+            <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="targetDateLabel" prefHeight="25.0" prefWidth="105.0" style="-fx-text-fill: black;" text="Mar 23">
+         <font>
+            <Font name="Plus Jakarta Sans Medium" size="16.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="15.0" />
+         </HBox.margin>
+      </Label>
+      <ImageView fx:id="avatarImg" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../ImageDashBoard/avatar.jpg" />
+         </image>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </ImageView>
+      <Label fx:id="priorityLabel" prefHeight="25.0" prefWidth="65.0" style="-fx-text-fill: black;" text="Medium">
+         <font>
+            <Font name="Plus Jakarta Sans Medium" size="16.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="35.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="progressLabel" style="-fx-text-fill: black;" text="50%">
+         <font>
+            <Font name="Plus Jakarta Sans Medium" size="16.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="30.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>
