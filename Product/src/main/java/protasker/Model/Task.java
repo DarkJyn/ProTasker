@@ -6,6 +6,16 @@ public class Task {
     String status;
     Project projectOwn;
     User userOwn;
+    String priority;
+
+    public Task(String name, String description, String status, Project projectOwn, User userOwn,String priority) {
+        this.name = name;
+        this.description = description;
+        this.status = status;
+        this.projectOwn = projectOwn;
+        this.priority = priority;
+        this.userOwn = userOwn;
+    }
 
     public String getName() {
         return name;

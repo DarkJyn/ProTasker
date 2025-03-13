@@ -17,12 +17,12 @@
                   <Insets left="25.0" top="10.0" />
                </HBox.margin>
                <children>
-                  <Label prefHeight="28.0" prefWidth="345.0" text="Task's Name">
+                  <Label fx:id="taskName" prefHeight="28.0" prefWidth="345.0" text="Task's Name">
                      <font>
                         <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
                      </font>
                   </Label>
-                  <Label text="Task's Decription">
+                  <Label fx:id="taskDecrip" text="Task's Decription">
                      <font>
                         <Font name="Plus Jakarta Sans Light" size="12.0" />
                      </font>
@@ -52,7 +52,7 @@
                   <Insets left="25.0" />
                </HBox.margin>
             </ImageView>
-            <Label text="Task' Status">
+            <Label fx:id="taskStatus" text="Task' Status">
                <font>
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Insets left="200.0" />
                </HBox.margin>
             </ImageView>
-            <Label text="Project's Name">
+            <Label fx:id="taskProjectNameOwn" text="Project's Name">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>

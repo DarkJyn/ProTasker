@@ -18,6 +18,9 @@ public class User {
     public ArrayList<Project> getProjects() {
         return projects;
     }
+    public ArrayList<Task> getTasksList() {
+        return tasksList;
+    }
     public String getUsername() {
         return username;
     }

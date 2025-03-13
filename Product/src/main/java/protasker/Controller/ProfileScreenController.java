@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import protasker.Model.User;
 
 import java.io.IOException;
 
@@ -17,10 +18,19 @@ public class ProfileScreenController {
     @FXML
     private Label overviewLabelInDashBoard;
 
+    private User currentUser;
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
+        System.out.println("set user in dash board succesful");
+    }
+
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+        Parent root = loader.load();
+        DashBoardController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
         Stage stage = (Stage) overviewLabelInDashBoard.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/dash-board.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -38,16 +48,22 @@ public class ProfileScreenController {
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
-    void onProjectClick(MouseEvent event) throws IOException {
+    void onProjectClick(MouseEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ProjectScreen/project-screen.fxml"));
+        Parent root = loader.load();
+        ProjectScreenController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
         Stage stage = (Stage) projectScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/ProjectScreen/project-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
     @FXML
     void onTaskClick(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
+        Parent root = loader.load();
+        TaskScreenController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
         Stage stage = (Stage) taskScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML

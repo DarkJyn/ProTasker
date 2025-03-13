@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import protasker.Model.Project;
 import protasker.Model.User;
 
+import java.io.IOException;
+
 public class NewProjectController {
 
     @FXML
@@ -49,22 +51,22 @@ public class NewProjectController {
     }
 
     @FXML
-    void onConfirmButtonClick(ActionEvent event) {
+    void onConfirmButtonClick(ActionEvent event) throws IOException {
         User leader = projectLeader.getSelectionModel().getSelectedItem();
         String projectName = projectNameField.getText();
         String projectLeaderName = currentUser.getUsername();
-        String status = statusOfProject.getValue().toString();
+        String status = statusOfProject.getValue();
         String targetDate = targerDateOfProject.getValue().toString();
-        String priority = priorityOfProject.getValue().toString();
+        String priority = priorityOfProject.getValue();
         String startDate = startDateOfProject.getValue().toString();
         String description = descriptionProject.getText();
-        if (projectName.isEmpty()  || projectLeaderName.isEmpty() || startDate == null || targetDate == null || priority == null || status == null) {
+        if (projectName.isEmpty()  || projectLeaderName.isEmpty() || startDate.isEmpty() || targetDate.isEmpty() || priority == null || status == null) {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
         Project newProject = new Project(projectName, priority, description, leader, startDate, targetDate);
         currentUser.getProjects().add(newProject);
-//        projectScreenController
+        projectScreenController.loadProjects();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
     }

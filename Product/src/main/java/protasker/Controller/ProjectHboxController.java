@@ -42,8 +42,8 @@ public class ProjectHboxController {
     }
 
     void setData(Project project) {
-        priorityLabel.setText(project.getPriority());
         projectNameLabel.setText(project.getName());
+        priorityLabel.setText(project.getPriority());
         targetDateLabel.setText(formatDate(project.getTargetDate()));
         progressLabel.setText(project.getProgress() + "%");
 

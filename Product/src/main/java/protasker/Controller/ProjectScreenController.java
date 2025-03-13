@@ -38,7 +38,8 @@ public class ProjectScreenController{
         loadProjects();
     }
 
-    private void loadProjects() throws IOException {
+    public void loadProjects() throws IOException {
+        vbox.getChildren().clear();
         for (Project project : projects) {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/View/ProjectScreen/project-hbox.fxml"));
@@ -67,15 +68,21 @@ public class ProjectScreenController{
     }
     @FXML
     void onProfileScreenClick(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/profile-screen.fxml"));
+        Parent root = loader.load();
+        ProfileScreenController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
         Stage stage = (Stage) profileScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/profile-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
     @FXML
     void onTaskClick(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
+        Parent root = loader.load();
+        TaskScreenController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
         Stage stage = (Stage) taskScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
@@ -85,7 +92,6 @@ public class ProjectScreenController{
     void onNewProjectButtonClick(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/View/ProjectScreen/new-project.fxml"));
         Parent root = fxmlLoader.load();
-
         NewProjectController controller = fxmlLoader.getController();
         controller.setCurrentUser(currentUser);
         controller.setProjectScreenController(this);

@@ -25,8 +25,11 @@ public class DashBoardController {
 
     @FXML
     void ontaskLabelInDashBoardClick(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
+        Parent root = loader.load();
+        TaskScreenController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
         Stage stage = (Stage) taskLabelInDashBoard.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -43,8 +46,11 @@ public class DashBoardController {
     private Label profileLabelInDashBoard;
     @FXML
     void onProfileInDashBoardClick(MouseEvent event) throws IOException {
-        Stage stage = (Stage) profileLabelInDashBoard.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/profile-screen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/profile-screen.fxml"));
+        Parent root = loader.load();
+        ProfileScreenController controller = loader.getController();
+        controller.setCurrentUser(currentUser);
+        Stage stage = (Stage) taskLabelInDashBoard.getScene().getWindow();
         stage.setScene(new Scene(root, 900, 600));
     }
 
@@ -61,7 +67,4 @@ public class DashBoardController {
         Stage stage = (Stage) projectLabelInDashBoard.getScene().getWindow();
         stage.setScene(new Scene(root, 900, 600));
     }
-
-    @FXML
-    private VBox middleVbox;
 }
