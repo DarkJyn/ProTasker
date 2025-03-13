@@ -58,8 +58,6 @@
                      <String fx:value="Low" />
                      <String fx:value="Medium" />
                      <String fx:value="High" />
-                     <String fx:value="Canceled" />
-                     <String fx:value="Duplicate" />
                   </FXCollections>
                </items>
             </ComboBox>

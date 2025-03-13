@@ -30,10 +30,13 @@ public class TaskScreenController {
 
     private User currentUser;
     private ArrayList<Task> tasks = new ArrayList<>();
-    public void setCurrentUser(User currentUser) {
+    private ArrayList<Project> projects = new ArrayList<>();
+    public void setCurrentUser(User currentUser) throws IOException {
         this.currentUser = currentUser;
         tasks = currentUser.getTasksList();
+        projects = currentUser.getProjects();
         System.out.println("set user in dash board succesful");
+        loadTasks();
     }
     @FXML
     private VBox vbox;
@@ -94,6 +97,7 @@ public class TaskScreenController {
         NewTaskController controller = fxmlLoader.getController();
         controller.setCurrentUser(currentUser);
         controller.setTaskScreenController(this);
+        controller.setParentProject(projects);
         Stage stage = new Stage(); // Tạo cửa sổ mới
         stage.setTitle("New Task");
         stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ
