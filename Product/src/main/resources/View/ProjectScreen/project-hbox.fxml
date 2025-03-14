@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="projectHbox" alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectHboxController">
+<HBox fx:id="projectHbox" alignment="CENTER_LEFT" onMouseClicked="#onProjectHboxClick" prefHeight="55.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectHboxController">
    <children>
       <Label fx:id="projectNameLabel" prefHeight="28.0" prefWidth="280.0" text="Project's Name">
          <font>
