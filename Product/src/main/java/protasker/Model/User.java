@@ -9,7 +9,7 @@ public class User {
     String password;
     ArrayList<Project> projects = new ArrayList<>();
     ArrayList<Task> tasksList = new ArrayList<>();
-    Image userAvatar = new Image(getClass().getResourceAsStream("/ImageDashBoard/avatar.jpg"));
+    Image userAvatar = new Image(getClass().getResourceAsStream("/ImageDashBoard/avatar2.jpg"));
 
     public User(String username, String password) {
         this.username = username;
