@@ -28,7 +28,6 @@ public class ProjectScreenController{
     @FXML
     private Label taskScreen;
 
-
     private User currentUser;
     private ArrayList<Project> projects = new ArrayList<>();
     public void setCurrentUser(User currentUser) throws IOException {
@@ -44,7 +43,9 @@ public class ProjectScreenController{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/View/ProjectScreen/project-hbox.fxml"));
             HBox hbox = loader.load();
+            System.out.println("test");
             ProjectHboxController controller = loader.getController();
+            controller.setProject(project);
             controller.setData(project);
             vbox.getChildren().add(hbox);
         }

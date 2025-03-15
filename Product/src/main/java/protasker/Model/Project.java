@@ -9,7 +9,7 @@ public class Project {
     User Leader;
     String StartDate;
     String TargetDate;
-    ArrayList<Task> tasks;
+    ArrayList<Task> tasks = new ArrayList<>();
     ArrayList<User> members;
     int progress;
 
@@ -56,5 +56,8 @@ public class Project {
         }
         if(totalTaskcnt == 0) {return 0;}
         return (int) doneTaskcnt * 100 / totalTaskcnt;
+    }
+    public ArrayList<Task> getTasks() {
+        return tasks;
     }
 }

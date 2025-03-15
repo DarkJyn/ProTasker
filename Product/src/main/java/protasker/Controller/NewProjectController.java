@@ -64,7 +64,7 @@ public class NewProjectController {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
-        Project newProject = new Project(projectName, priority, description, leader, startDate, targetDate);
+        Project newProject = new Project(projectName, priority, description, currentUser, startDate, targetDate);
         currentUser.getProjects().add(newProject);
         projectScreenController.loadProjects();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
