@@ -42,6 +42,7 @@ public class NewTaskController {
     private ComboBox<User> taskUser;
 
     private TaskScreenController taskScreenController;
+    private ProjectDetailController projectDetailController;
     private User currentUser;
 
     public void setCurrentUser(User user) {
@@ -75,6 +76,9 @@ public class NewTaskController {
             }
         });
     }
+    public void setProjectDetailScreenController(ProjectDetailController controller) {
+        this.projectDetailController = controller;
+    }
 
     @FXML
     void onCancelButton(ActionEvent event) {
@@ -90,13 +94,15 @@ public class NewTaskController {
         String priority = taskPriority.getValue();
         String status  = statusOfTask.getValue();
         Project project = parentProject.getSelectionModel().getSelectedItem();
-        if (taskScreenController == null || priority == null || status == null) {
+        if (taskName == null || priority == null || status == null || project == null) {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
         Task task = new Task(taskName,description, status, project, user,priority);
         currentUser.getTasksList().add(task);
-        taskScreenController.loadTasks();
+        project.getTasks().add(task);
+        if(taskScreenController != null) taskScreenController.loadTasks();
+        if(projectDetailController != null) projectDetailController.loadTasks();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
     }

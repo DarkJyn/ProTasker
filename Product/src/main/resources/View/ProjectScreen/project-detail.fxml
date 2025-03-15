@@ -85,7 +85,7 @@
                         <Insets left="40.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Project">
+                  <Label fx:id="projectScreen" accessibleRole="BUTTON" onMouseClicked="#onProjectScreenClick" prefHeight="11.0" prefWidth="90.0" text="Project">
                      <HBox.margin>
                         <Insets left="15.0" />
                      </HBox.margin>
@@ -149,7 +149,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label prefHeight="28.0" prefWidth="310.0" text="Project's Name">
+                  <Label fx:id="projectName" prefHeight="28.0" prefWidth="310.0" text="Project's Name">
                      <font>
                         <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
                      </font>
@@ -165,7 +165,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label prefHeight="22.0" prefWidth="65.0" style="-fx-text-fill: black;" text="50%">
+                  <Label fx:id="projectProgress" prefHeight="22.0" prefWidth="65.0" style="-fx-text-fill: black;" text="50%">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="16.0" />
                      </font>
@@ -178,7 +178,7 @@
                         <Insets />
                      </HBox.margin>
                   </Line>
-                  <Button fx:id="newProjectButton" mnemonicParsing="false" onAction="#onNewProjectButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="New Task">
+                  <Button fx:id="newTaskButton" mnemonicParsing="false" onAction="#onNewTaskButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="New Task">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -200,7 +200,7 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="691.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
+                  <Button fx:id="showAllTaskButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -215,7 +215,7 @@
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Button>
-                  <Label text="0">
+                  <Label fx:id="numberOfAllTasks" text="0">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -223,7 +223,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
+                  <Button fx:id="showActiveTaskButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -238,7 +238,7 @@
                         <Insets left="120.0" />
                      </HBox.margin>
                   </Button>
-                  <Label text="0">
+                  <Label fx:id="numberOfActiveTasks" text="0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -246,12 +246,12 @@
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
+                  <Button fx:id="showDoneTaskButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="showDoneTaskButton" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../ImageDashBoard/checkbox%20(1).png" />
                            </image>
@@ -261,7 +261,7 @@
                         <Insets left="130.0" />
                      </HBox.margin>
                   </Button>
-                  <Label text="0">
+                  <Label fx:id="numberOfDoneTasks" text="0">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -276,85 +276,7 @@
                   <Insets bottom="15.0" left="10.0" />
                </VBox.margin>
                <content>
-                  <VBox prefHeight="600.0" prefWidth="667.0" spacing="10.0">
-                     <children>
-                        <VBox minWidth="600.0" prefHeight="90.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
-                           <children>
-                              <HBox prefHeight="76.0" prefWidth="389.0">
-                                 <children>
-                                    <VBox prefHeight="56.0" prefWidth="500.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" top="10.0" />
-                                       </HBox.margin>
-                                       <children>
-                                          <Label fx:id="taskName" prefHeight="28.0" prefWidth="345.0" text="Task's Name">
-                                             <font>
-                                                <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="taskDecrip" text="Task's Decription">
-                                             <font>
-                                                <Font name="Plus Jakarta Sans Light" size="12.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                    <ImageView fx:id="userAvaPath" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../ImageDashBoard/avatar.jpg" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets top="10.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT">
-                                 <children>
-                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../ImageDashBoard/clone.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                    <Label fx:id="taskStatus" text="Task' Status">
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../ImageDashBoard/cube.png" />
-                                       </image>
-                                       <HBox.margin>
-                                          <Insets left="200.0" />
-                                       </HBox.margin>
-                                    </ImageView>
-                                    <Label fx:id="taskProjectNameOwn" text="Project's Name">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
+                  <VBox fx:id="vbox" prefHeight="600.0" prefWidth="667.0" spacing="10.0" />
                </content>
             </ScrollPane>
          </children>

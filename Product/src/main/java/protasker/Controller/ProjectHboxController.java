@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import protasker.Model.Project;
+import protasker.Model.User;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -37,6 +38,9 @@ public class ProjectHboxController {
     @FXML
     private Label targetDateLabel;
 
+    Project project;
+    User user;
+
     public static String formatDate(String inputDate) {
         // Định dạng ban đầu
         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -48,18 +52,28 @@ public class ProjectHboxController {
         // Định dạng lại thành "MMM dd"
         return date.format(outputFormatter);
     }
-
+    void setProject(Project project) {
+        System.out.println(project == null);
+        this.project = project;
+        System.out.println("set project hbox done");
+    }
     void setData(Project project) {
         projectNameLabel.setText(project.getName());
         priorityLabel.setText(project.getPriority());
         targetDateLabel.setText(formatDate(project.getTargetDate()));
         progressLabel.setText(project.getProgress() + "%");
         avatarImg.setImage(project.getLeader().getUserAvatarPath());
+        System.out.println("set project data done");
     }
+
     @FXML
     void onProjectHboxClick(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ProjectScreen/project-detail.fxml"));
+        Parent root = loader.load();
+        ProjectDetailController controller = loader.getController();
+        controller.setCurrentUser(project.getLeader());
+        controller.setProject(project);
         Stage stage = (Stage) projectHbox.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/ProjectScreen/project-detail.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 }
