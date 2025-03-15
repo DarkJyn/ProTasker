@@ -251,7 +251,7 @@
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fx:id="showDoneTaskButton" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../ImageDashBoard/checkbox%20(1).png" />
                            </image>

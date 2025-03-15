@@ -52,7 +52,7 @@
                   <Insets left="25.0" />
                </HBox.margin>
             </ImageView>
-            <Label fx:id="taskStatus" text="Task' Status">
+            <Label fx:id="taskStatus" prefHeight="19.0" prefWidth="273.0" text="Task' Status">
                <font>
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>
@@ -65,7 +65,7 @@
                   <Image url="@../../ImageDashBoard/cube.png" />
                </image>
                <HBox.margin>
-                  <Insets left="200.0" />
+                  <Insets left="50.0" />
                </HBox.margin>
             </ImageView>
             <Label fx:id="taskProjectNameOwn" text="Project's Name">
