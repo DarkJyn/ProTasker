@@ -14,7 +14,8 @@ public class TaskController {
 
     @FXML
     private VBox taskBG;
-
+    @FXML
+    private ImageView userAvaPath;
     @FXML
     private Label taskDecrip;
 
@@ -33,6 +34,7 @@ public class TaskController {
         taskName.setText(task.getName());
         taskDecrip.setText(task.getDescription());
         taskStatus.setText(task.getStatus());
-//        taskProjectNameOwn.setText(task.getProjectOwn().getName());
+        userAvaPath.setImage(task.getUserOwn().getUserAvatarPath());
+        taskProjectNameOwn.setText(task.getProjectOwn().getName());
     }
 }
