@@ -16,7 +16,7 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.DashBoardController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
+      <VBox prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: white;">
          <children>
             <HBox alignment="BOTTOM_LEFT" prefHeight="66.0" prefWidth="200.0">
                <children>
@@ -140,7 +140,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="middleVbox" prefHeight="600.0" prefWidth="414.0" style="-fx-background-color: #faf9f9;">
+      <VBox fx:id="middleVbox" prefHeight="600.0" prefWidth="409.0" style="-fx-background-color: #faf9f9;">
          <children>
             <HBox alignment="CENTER" prefHeight="42.0" prefWidth="345.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                <children>
@@ -201,7 +201,7 @@
                <content>
                   <VBox prefHeight="936.0" prefWidth="384.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@../ImageDashBoard/MenuBarCustom.css">
                      <children>
-                        <VBox prefHeight="90.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="106.0" prefWidth="0.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -279,7 +279,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <VBox prefHeight="92.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="92.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -357,7 +357,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <VBox prefHeight="92.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="92.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -435,7 +435,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <VBox prefHeight="92.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="92.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -513,7 +513,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <VBox prefHeight="92.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="92.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -591,7 +591,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <VBox prefHeight="92.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="92.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>
@@ -669,7 +669,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <VBox prefHeight="92.0" prefWidth="389.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+                        <VBox prefHeight="92.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>
                               <HBox prefHeight="76.0" prefWidth="389.0">
                                  <children>

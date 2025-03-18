@@ -30,11 +30,16 @@ public class TaskController {
 
     @FXML
     private ImageView taskUserAvatar;
-    void setData(Task task) {
+    void setData(Task task){
         taskName.setText(task.getName());
         taskDecrip.setText(task.getDescription());
         taskStatus.setText(task.getStatus());
         userAvaPath.setImage(task.getUserOwn().getUserAvatarPath());
-        taskProjectNameOwn.setText(task.getProjectOwn().getName());
+        if(task.getProjectOwn() != null){
+            taskProjectNameOwn.setText(task.getProjectOwn().getName());
+        }
+        else{
+            taskProjectNameOwn.setText("None");
+        }
     }
 }

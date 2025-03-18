@@ -141,7 +141,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="345.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
+                  <Button fx:id="showAllTaskButton" mnemonicParsing="false" onAction="#onShowAllTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -156,7 +156,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
+                  <Button fx:id="showActiveTaskButton" mnemonicParsing="false" onAction="#onShowActiveTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -171,7 +171,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
+                  <Button fx:id="showDoneTaskButton" mnemonicParsing="false" onAction="#onShowDoneTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
