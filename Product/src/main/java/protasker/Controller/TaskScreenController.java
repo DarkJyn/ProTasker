@@ -104,4 +104,40 @@ public class TaskScreenController {
         stage.show();
     }
 
+
+    public void onShowAllTaskButton(ActionEvent actionEvent) throws IOException {
+        loadTasks();
+    }
+
+    public void onShowActiveTaskButton(ActionEvent actionEvent) throws IOException {
+        vbox.getChildren().clear();
+        if(tasks!= null) {
+            for (Task task : tasks){
+                if(task.getStatus().equals("In Progress")) {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                    VBox vboxItem = loader.load();
+                    TaskController controller = loader.getController();
+                    controller.setData(task);
+                    vbox.getChildren().add(vboxItem);
+                }
+            }
+        }
+    }
+
+    public void onShowDoneTaskButton(ActionEvent actionEvent) throws IOException {
+        vbox.getChildren().clear();
+        if(tasks!= null) {
+            for (Task task : tasks){
+                if(task.getStatus().equals("Done")) {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                    VBox vboxItem = loader.load();
+                    TaskController controller = loader.getController();
+                    controller.setData(task);
+                    vbox.getChildren().add(vboxItem);
+                }
+            }
+        }
+    }
 }

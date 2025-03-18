@@ -16,6 +16,7 @@ import protasker.Model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ProjectScreenController{
     @FXML
@@ -36,7 +37,6 @@ public class ProjectScreenController{
         System.out.println("set user in project screen successful");
         loadProjects();
     }
-
     public void loadProjects() throws IOException {
         vbox.getChildren().clear();
         for (Project project : projects) {
@@ -101,5 +101,19 @@ public class ProjectScreenController{
         stage.setTitle("New Project");
         stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ
         stage.show();
+    }
+
+    public void onTargetDateButtonClick(ActionEvent actionEvent) throws IOException {
+        projects.sort(Comparator.comparing(Project::getDueDateAsLocalDate));
+        loadProjects();
+    }
+
+    public void onProgressButtonClick(ActionEvent actionEvent) throws IOException {
+        projects.sort(Comparator.comparingInt(Project::getProgressAsInt));
+        loadProjects();
+    }
+    public void onPriorityButtonClick(ActionEvent actionEvent) throws IOException {
+        projects.sort(Comparator.comparingInt(Project::getPriorityAsInt));
+        loadProjects();
     }
 }

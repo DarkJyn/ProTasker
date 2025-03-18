@@ -31,11 +31,8 @@
                </cursor>
                <items>
                   <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="Todo" />
                      <String fx:value="In Progress" />
                      <String fx:value="Done" />
-                     <String fx:value="Canceled" />
-                     <String fx:value="Duplicate" />
                   </FXCollections>
                </items>
             </ComboBox>

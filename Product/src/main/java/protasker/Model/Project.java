@@ -1,5 +1,7 @@
 package protasker.Model;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Project {
@@ -11,12 +13,25 @@ public class Project {
     String TargetDate;
     ArrayList<Task> tasks = new ArrayList<>();
     ArrayList<User> members;
-    int progress;
+    String progress;
 
     public String getPriority() {
         return priority;
     }
-
+    public LocalDate getDueDateAsLocalDate() {
+        return LocalDate.parse(TargetDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    }
+    public int getProgressAsInt() {
+        return Integer.parseInt(progress.replace("%", ""));
+    }
+    public int getPriorityAsInt() {
+        return switch (priority) {
+            case "Low" -> 1;
+            case "Medium" -> 2;
+            case "High" -> 3;
+            default -> 0;
+        };
+    }
     public String getName() {
         return name;
     }
@@ -33,7 +48,8 @@ public class Project {
         return TargetDate;
     }
 
-    public int getProgress() {
+    public String getProgress() {
+        progress = setProgress() + "%";
         return progress;
     }
 
@@ -45,17 +61,16 @@ public class Project {
         StartDate = startDate;
         TargetDate = targetDate;
     }
-    public int setProgress(int progress) {
+    public String setProgress() {
         int doneTaskcnt = 0;
         int totalTaskcnt = tasks.size();
         for(Task task : tasks) {
             String status = task.getStatus();
-            if(status.equals("Done")){
-                doneTaskcnt++;
-            }
+            if(status.equals("Done")) doneTaskcnt++;
         }
-        if(totalTaskcnt == 0) {return 0;}
-        return (int) doneTaskcnt * 100 / totalTaskcnt;
+        if(totalTaskcnt == 0) {return "0";}
+        return Integer.toString( (int)(doneTaskcnt * 100 / totalTaskcnt)) ;
+//        return "66%";
     }
     public ArrayList<Task> getTasks() {
         return tasks;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -92,6 +93,9 @@
                      <font>
                         <Font name="Montserrat Medium" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Label>
                </children>
             </HBox>
@@ -200,7 +204,7 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="691.0">
                <children>
-                  <Button fx:id="showAllTaskButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
+                  <Button fx:id="showAllTaskButton" mnemonicParsing="false" onAction="#onShowAllTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -223,7 +227,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="showActiveTaskButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
+                  <Button fx:id="showActiveTaskButton" mnemonicParsing="false" onAction="#onShowActiveTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -246,7 +250,7 @@
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                   </Label>
-                  <Button fx:id="showDoneTaskButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
+                  <Button fx:id="showDoneTaskButton" mnemonicParsing="false" onAction="#onShowDoneTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>

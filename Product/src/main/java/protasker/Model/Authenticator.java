@@ -52,7 +52,7 @@ public class Authenticator {
         }
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
-            bw.write(username + "," + password);
+            bw.write(username + "," + password + "\n");
             bw.newLine();
             return "Successfully registered!";
         } catch (IOException e) {

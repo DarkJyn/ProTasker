@@ -94,15 +94,15 @@ public class NewTaskController {
         String priority = taskPriority.getValue();
         String status  = statusOfTask.getValue();
         Project project = parentProject.getSelectionModel().getSelectedItem();
-        if (taskName == null || priority == null || status == null || project == null) {
+        if (taskName.isEmpty() || priority == null || status == null) {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
         Task task = new Task(taskName,description, status, project, user,priority);
         currentUser.getTasksList().add(task);
-        project.getTasks().add(task);
+        if(parentProject.getSelectionModel().getSelectedItem() != null)project.getTasks().add(task);
         if(taskScreenController != null) taskScreenController.loadTasks();
-        if(projectDetailController != null) projectDetailController.loadTasks();
+        if(projectDetailController != null) projectDetailController.loadAllTasks();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
     }

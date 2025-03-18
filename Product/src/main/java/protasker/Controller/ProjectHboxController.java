@@ -55,15 +55,17 @@ public class ProjectHboxController {
     void setProject(Project project) {
         System.out.println(project == null);
         this.project = project;
+        this.project.setProgress();
+        progressLabel.setText(this.project.getProgress() + "%");
         System.out.println("set project hbox done");
     }
     void setData(Project project) {
         projectNameLabel.setText(project.getName());
         priorityLabel.setText(project.getPriority());
         targetDateLabel.setText(formatDate(project.getTargetDate()));
-        progressLabel.setText(project.getProgress() + "%");
+        progressLabel.setText(project.getProgress());
+        System.out.println(project.getProgress());
         avatarImg.setImage(project.getLeader().getUserAvatarPath());
-        System.out.println("set project data done");
     }
 
     @FXML

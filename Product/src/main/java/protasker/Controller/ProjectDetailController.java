@@ -69,8 +69,9 @@ public class ProjectDetailController {
     void setProject(Project project) throws IOException {
         this.project = project;
         projectName.setText(project.getName());
-        projectProgress.setText(String.valueOf(project.getProgress()) + "%");
-        loadTasks();
+        project.setProgress();
+        projectProgress.setText(project.getProgress() + "%");
+        loadAllTasks();
     }
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
@@ -95,7 +96,8 @@ public class ProjectDetailController {
     }
     @FXML
     private VBox vbox;
-    public void loadTasks() throws IOException {
+
+    public void loadAllTasks() throws IOException {
         int numberOfDoneTask = 0;
         int numberOfActiveTask = 0;
         vbox.getChildren().clear();
@@ -114,6 +116,8 @@ public class ProjectDetailController {
         numberOfAllTasks.setText(String.valueOf(project.getTasks().size()));
         numberOfActiveTasks.setText(String.valueOf(numberOfActiveTask));
         numberOfDoneTasks.setText(String.valueOf(numberOfDoneTask));
+        projectProgress.setText(project.getProgress());
+        System.out.println(project.getProgress());
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
@@ -152,5 +156,45 @@ public class ProjectDetailController {
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) projectScreen.getScene().getWindow();
         stage.setScene(new Scene(root, 900, 600));
+    }
+    public void loadActiveTasks() throws IOException {
+        vbox.getChildren().clear();
+        if(project.getTasks() != null) {
+            for (Task task : project.getTasks()){
+                if(task.getStatus().equals("In Progress")) {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                    VBox vboxItem = loader.load();
+                    TaskController controller = loader.getController();
+                    controller.setData(task);
+                    vbox.getChildren().add(vboxItem);
+                }
+            }
+        }
+    }
+    public void loadDoneTask() throws IOException {
+        vbox.getChildren().clear();
+        if(project.getTasks() != null) {
+            for (Task task : project.getTasks()){
+                if(task.getStatus().equals("Done")) {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                    VBox vboxItem = loader.load();
+                    TaskController controller = loader.getController();
+                    controller.setData(task);
+                    vbox.getChildren().add(vboxItem);
+                }
+            }
+        }
+    }
+    public void onShowAllTaskButton(ActionEvent actionEvent) throws IOException {
+        loadAllTasks();
+    }
+
+    public void onShowActiveTaskButton(ActionEvent actionEvent) throws IOException {
+        loadActiveTasks();
+    }
+    public void onShowDoneTaskButton(ActionEvent actionEvent) throws IOException {
+        loadDoneTask();
     }
 }

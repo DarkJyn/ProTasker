@@ -149,7 +149,7 @@
                         <Insets left="30.0" right="15.0" />
                      </HBox.margin>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Target Date">
+                  <Button fx:id="onTargetDateButton" mnemonicParsing="false" onAction="#onTargetDateButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Target Date">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -164,7 +164,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Progress">
+                  <Button fx:id="onProgressButton" mnemonicParsing="false" onAction="#onProgressButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Progress">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -179,7 +179,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Priority">
+                  <Button fx:id="onPriorityButton" mnemonicParsing="false" onAction="#onPriorityButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Priority">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
