@@ -18,6 +18,7 @@ import protasker.Model.User;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class ProjectDetailController {
     @FXML
@@ -62,7 +63,6 @@ public class ProjectDetailController {
 
     User currentUser;
     Project project;
-
     void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
     }
@@ -109,6 +109,7 @@ public class ProjectDetailController {
                 loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                 VBox vboxItem = loader.load();
                 TaskController controller = loader.getController();
+                controller.setCurrentProject(currentUser);
                 controller.setData(task);
                 vbox.getChildren().add(vboxItem);
             }
@@ -166,6 +167,7 @@ public class ProjectDetailController {
                     loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                     VBox vboxItem = loader.load();
                     TaskController controller = loader.getController();
+                    controller.setCurrentProject(currentUser);
                     controller.setData(task);
                     vbox.getChildren().add(vboxItem);
                 }
@@ -181,6 +183,7 @@ public class ProjectDetailController {
                     loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                     VBox vboxItem = loader.load();
                     TaskController controller = loader.getController();
+                    controller.setCurrentProject(currentUser);
                     controller.setData(task);
                     vbox.getChildren().add(vboxItem);
                 }

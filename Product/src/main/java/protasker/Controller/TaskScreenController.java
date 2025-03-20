@@ -17,6 +17,7 @@ import protasker.Model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class TaskScreenController {
     @FXML
@@ -27,7 +28,6 @@ public class TaskScreenController {
 
     @FXML
     private Label projectScreen;
-
     private User currentUser;
     private ArrayList<Task> tasks = new ArrayList<>();
     private ArrayList<Project> projects = new ArrayList<>();
@@ -47,6 +47,7 @@ public class TaskScreenController {
             loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
             VBox vboxItem = loader.load();
             TaskController controller = loader.getController();
+            controller.setCurrentProject(currentUser);
             controller.setData(task);
             vbox.getChildren().add(vboxItem);
         }
@@ -118,6 +119,7 @@ public class TaskScreenController {
                     loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                     VBox vboxItem = loader.load();
                     TaskController controller = loader.getController();
+                    controller.setCurrentProject(currentUser);
                     controller.setData(task);
                     vbox.getChildren().add(vboxItem);
                 }
@@ -134,6 +136,7 @@ public class TaskScreenController {
                     loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                     VBox vboxItem = loader.load();
                     TaskController controller = loader.getController();
+                    controller.setCurrentProject(currentUser);
                     controller.setData(task);
                     vbox.getChildren().add(vboxItem);
                 }

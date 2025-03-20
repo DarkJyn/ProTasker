@@ -8,12 +8,16 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import protasker.Model.FileContact;
 import protasker.Model.Project;
 import protasker.Model.Task;
 import protasker.Model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+import static protasker.Model.Authenticator.FILE_PATH;
 
 public class NewTaskController {
 
@@ -37,10 +41,6 @@ public class NewTaskController {
 
     @FXML
     private TextField taskTitle;
-
-    @FXML
-    private ComboBox<User> taskUser;
-
     private TaskScreenController taskScreenController;
     private ProjectDetailController projectDetailController;
     private User currentUser;
@@ -98,9 +98,10 @@ public class NewTaskController {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
-        Task task = new Task(taskName,description, status, project, user,priority);
+        Task task = new Task(taskName,description, status, project.getName(), user.toUserInfo(),priority);
         currentUser.getTasksList().add(task);
-        if(parentProject.getSelectionModel().getSelectedItem() != null)project.getTasks().add(task);
+        if(parentProject.getSelectionModel().getSelectedItem() != null) project.getTasks().add(task);
+        FileContact.saveUsersToJson(currentUser);
         if(taskScreenController != null) taskScreenController.loadTasks();
         if(projectDetailController != null) projectDetailController.loadAllTasks();
         Stage stage = (Stage) confirmButton.getScene().getWindow();

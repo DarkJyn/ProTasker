@@ -30,12 +30,12 @@
             <Font name="Plus Jakarta Sans Medium" size="14.0" />
          </font>
       </TextArea>
-      <HBox prefHeight="35.0" prefWidth="630.0">
+      <HBox prefHeight="35.0" prefWidth="630.0" spacing="10.0">
          <VBox.margin>
             <Insets left="20.0" />
          </VBox.margin>
          <children>
-            <ComboBox fx:id="statusOfTask" prefHeight="26.0" prefWidth="111.0" promptText="Status">
+            <ComboBox fx:id="statusOfTask" prefHeight="26.0" prefWidth="111.0" promptText="Status" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -46,7 +46,7 @@
                     </FXCollections>
                 </items>
             </ComboBox>
-            <ComboBox fx:id="taskPriority" prefHeight="26.0" prefWidth="96.0" promptText="Priority">
+            <ComboBox fx:id="taskPriority" prefHeight="26.0" prefWidth="96.0" promptText="Priority" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -58,11 +58,7 @@
                   </FXCollections>
                </items>
             </ComboBox>
-            <ComboBox fx:id="taskUser" prefHeight="26.0" prefWidth="74.0" promptText="User">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></ComboBox>
-            <ComboBox fx:id="parentProject" prefHeight="26.0" prefWidth="110.0" promptText="Project">
+            <ComboBox fx:id="parentProject" prefHeight="26.0" prefWidth="110.0" promptText="Project" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></ComboBox>
@@ -70,7 +66,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="650.0">
          <children>
-            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButton" prefHeight="29.0" prefWidth="90.0" text="Confirm">
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButton" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #3498db; -fx-background-radius: 10;" text="Confirm">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
@@ -78,7 +74,7 @@
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" prefHeight="29.0" prefWidth="90.0" text="Cancel">
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #3498db; -fx-background-radius: 10;" text="Cancel">
                <font>
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>

@@ -13,7 +13,9 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import protasker.Model.Project;
 import protasker.Model.User;
+import protasker.Model.UserInfo;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -39,8 +41,8 @@ public class ProjectHboxController {
     private Label targetDateLabel;
 
     Project project;
-    User user;
-
+    User leader;
+    UserInfo leaderInfo;
     public static String formatDate(String inputDate) {
         // Định dạng ban đầu
         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -52,20 +54,27 @@ public class ProjectHboxController {
         // Định dạng lại thành "MMM dd"
         return date.format(outputFormatter);
     }
+    void setCurrentUser(User user) {
+        leader = user;
+    }
     void setProject(Project project) {
         System.out.println(project == null);
         this.project = project;
+        leaderInfo = project.getLeader();
         this.project.setProgress();
         progressLabel.setText(this.project.getProgress() + "%");
         System.out.println("set project hbox done");
     }
+
     void setData(Project project) {
         projectNameLabel.setText(project.getName());
         priorityLabel.setText(project.getPriority());
         targetDateLabel.setText(formatDate(project.getTargetDate()));
         progressLabel.setText(project.getProgress());
-        System.out.println(project.getProgress());
-        avatarImg.setImage(project.getLeader().getUserAvatarPath());
+        File file = new File(leader.getUserAvatarPath());
+        Image image = new Image(file.toURI().toString());
+        avatarImg.setImage(image);
+//        avatarImg.setImage(new Image("D:\\Dean'sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"));
     }
 
     @FXML
@@ -73,7 +82,7 @@ public class ProjectHboxController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ProjectScreen/project-detail.fxml"));
         Parent root = loader.load();
         ProjectDetailController controller = loader.getController();
-        controller.setCurrentUser(project.getLeader());
+        controller.setCurrentUser(leader);
         controller.setProject(project);
         Stage stage = (Stage) projectHbox.getScene().getWindow();
         stage.setScene(new Scene(root, 900, 600));

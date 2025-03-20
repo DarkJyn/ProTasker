@@ -1,29 +1,33 @@
 package protasker.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import protasker.Model.FileContact;
 import protasker.Model.User;
-
+import java.io.File;
 import java.io.IOException;
 
 public class ProfileScreenController {
 
     @FXML
     private Label overviewLabelInDashBoard;
-
     private User currentUser;
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
-        System.out.println("set user in dash board succesful");
+        File file = new File(currentUser.getUserAvatarPath());
+        Image image = new Image(file.toURI().toString());
+        avatarUser.setImage(image);
     }
-
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
@@ -71,7 +75,27 @@ public class ProfileScreenController {
     @FXML
     void initialize() {
         assert avatarUser != null : "fx:id=\"avatarUser\" was not injected: check your FXML file 'project-screen.fxml'.";
+
         Rectangle rect = new Rectangle(200,200);
         avatarUser.setClip(rect);
+    }
+
+    public void onUploadNewImageButtonClick(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Upload Image");
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg")
+        );
+
+        File file = fileChooser.showOpenDialog(new Stage());
+        if (file != null) {
+            String imagePath = file.getAbsolutePath();
+            currentUser.setUserAvatarPath(imagePath);
+            System.out.println(imagePath);
+            Image image = new Image(file.toURI().toString()); // Chuyển path thành URI
+            avatarUser.setImage(image);
+            FileContact.saveUsersToJson(currentUser);
+        }
     }
 }

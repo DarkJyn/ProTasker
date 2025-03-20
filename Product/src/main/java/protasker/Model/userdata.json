@@ -1,0 +1,47 @@
+[
+  {
+    "username": "a",
+    "password": "a",
+    "projects": [
+      {
+        "name": "Project 1",
+        "priority": "Low",
+        "description": "a",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-03-03",
+        "TargetDate": "2025-03-31",
+        "tasks": [
+          {
+            "name": "a",
+            "description": "a",
+            "status": "Done",
+            "projectOwn": "Project 1",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          }
+        ],
+        "progress": "0%"
+      }
+    ],
+    "tasksList": [
+      {
+        "name": "a",
+        "description": "a",
+        "status": "In Progress",
+        "projectOwn": "Project 1",
+        "userOwn": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "priority": "Low"
+      }
+    ],
+    "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+  }
+]

@@ -4,10 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import protasker.Model.FileContact;
 import protasker.Model.Project;
 import protasker.Model.User;
 
 import java.io.IOException;
+import java.net.Authenticator;
+import java.util.List;
+
+import static protasker.Model.Authenticator.FILE_PATH;
 
 public class NewProjectController {
 
@@ -19,9 +24,6 @@ public class NewProjectController {
 
     @FXML
     private ComboBox<String> priorityOfProject;
-
-    @FXML
-    private ComboBox<User> projectLeader;
 
     @FXML
     private TextField projectNameField;
@@ -37,7 +39,6 @@ public class NewProjectController {
     private DatePicker targerDateOfProject;
     private ProjectScreenController projectScreenController;
     private User currentUser;
-
     public void setCurrentUser(User user) {
         this.currentUser = user;
     }
@@ -52,7 +53,7 @@ public class NewProjectController {
 
     @FXML
     void onConfirmButtonClick(ActionEvent event) throws IOException {
-        User leader = projectLeader.getSelectionModel().getSelectedItem();
+
         String projectName = projectNameField.getText();
         String projectLeaderName = currentUser.getUsername();
         String status = statusOfProject.getValue();
@@ -64,8 +65,9 @@ public class NewProjectController {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
-        Project newProject = new Project(projectName, priority, description, currentUser, startDate, targetDate);
+        Project newProject = new Project(projectName, priority, description, currentUser.toUserInfo(), startDate, targetDate);
         currentUser.getProjects().add(newProject);
+        FileContact.saveUsersToJson(currentUser);
         projectScreenController.loadProjects();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();

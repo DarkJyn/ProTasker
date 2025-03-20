@@ -17,11 +17,11 @@ import protasker.Model.User;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class ProjectScreenController{
     @FXML
     private Label overviewLabelInDashBoard;
-
     @FXML
     private Label profileScreen;
     @FXML
@@ -31,6 +31,7 @@ public class ProjectScreenController{
 
     private User currentUser;
     private ArrayList<Project> projects = new ArrayList<>();
+
     public void setCurrentUser(User currentUser) throws IOException {
         this.currentUser = currentUser;
         projects = currentUser.getProjects();
@@ -45,6 +46,7 @@ public class ProjectScreenController{
             HBox hbox = loader.load();
             System.out.println("test");
             ProjectHboxController controller = loader.getController();
+            controller.setCurrentUser(currentUser);
             controller.setProject(project);
             controller.setData(project);
             vbox.getChildren().add(hbox);
@@ -96,7 +98,6 @@ public class ProjectScreenController{
         NewProjectController controller = fxmlLoader.getController();
         controller.setCurrentUser(currentUser);
         controller.setProjectScreenController(this);
-
         Stage stage = new Stage(); // Tạo cửa sổ mới
         stage.setTitle("New Project");
         stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ

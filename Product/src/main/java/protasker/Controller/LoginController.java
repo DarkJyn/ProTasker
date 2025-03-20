@@ -12,9 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import protasker.Model.Authenticator;
+import protasker.Model.FileContact;
 import protasker.Model.User;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public class LoginController{
@@ -33,7 +35,7 @@ public class LoginController{
 
     @FXML
     private TextField usernameTextField;
-
+    List<User> userList =  FileContact.loadUserFromJson();
     @FXML
     void onSignUpScreen(MouseEvent event) throws IOException {
         Stage stage = (Stage) signUpScreen.getScene().getWindow();
@@ -42,16 +44,18 @@ public class LoginController{
     }
     @FXML
     void onLogInButtonClick(ActionEvent event) throws IOException {
-        String result = Authenticator.checkLogin(usernameTextField.getText(), PasswordTextField.getText());
-        loginNotiLabel.setText(result);
-        if(result.equals("Login Successful")){
-            User user = new User(usernameTextField.getText(), PasswordTextField.getText());
+        User user = Authenticator.checkLogin(usernameTextField.getText(), PasswordTextField.getText());
+
+        if(user != null){
             Stage stage = (Stage) logInButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
             Parent root = loader.load();
             DashBoardController dashBoardController = loader.getController();
             dashBoardController.setCurrentUser(user);
             stage.setScene(new Scene(root, 900, 600));
+        }
+        else{
+            loginNotiLabel.setText("Invalid Username or Password");
         }
     }
 }

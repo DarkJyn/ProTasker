@@ -6,15 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import protasker.Model.User;
-
 import java.io.IOException;
+import java.util.List;
 
 public class DashBoardController {
-
     private User currentUser;
+
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
         System.out.println("set user in dash board succesful");
@@ -22,7 +21,6 @@ public class DashBoardController {
 
     @FXML
     private Label taskLabelInDashBoard;
-
     @FXML
     void ontaskLabelInDashBoardClick(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/TaskScreen/task-screen.fxml"));
@@ -32,9 +30,9 @@ public class DashBoardController {
         Stage stage = (Stage) taskLabelInDashBoard.getScene().getWindow();
         stage.setScene(new Scene(root, 900, 600));
     }
+
     @FXML
     private Label logOut;
-
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
@@ -50,14 +48,12 @@ public class DashBoardController {
         Parent root = loader.load();
         ProfileScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
-        Stage stage = (Stage) taskLabelInDashBoard.getScene().getWindow();
+        Stage stage = (Stage) profileLabelInDashBoard.getScene().getWindow();
         stage.setScene(new Scene(root, 900, 600));
     }
 
     @FXML
     private Label projectLabelInDashBoard;
-
-
     @FXML
     void onProjectInDashBoardClick(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ProjectScreen/project-screen.fxml"));

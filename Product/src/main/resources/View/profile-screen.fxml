@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Arc?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProfileScreenController">
@@ -160,193 +154,36 @@
             </Line>
             <HBox alignment="CENTER_LEFT">
                <VBox.margin>
-                  <Insets left="50.0" top="30.0" />
-               </VBox.margin>
-               <children>
-                  <ImageView fx:id="avatarUser" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../ImageDashBoard/avatar.jpg" />
-                     </image>
-                  </ImageView>
-                  <StackPane alignment="TOP_LEFT" prefHeight="141.0" prefWidth="260.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#141522" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="240.0">
-                           <StackPane.margin>
-                              <Insets left="20.0" />
-                           </StackPane.margin>
-                        </Rectangle>
-                        <Label style="-fx-text-fill: #FFFFFF;" text="Running Task">
-                           <StackPane.margin>
-                              <Insets left="45.0" top="13.0" />
-                           </StackPane.margin>
-                           <font>
-                              <Font name="Plus Jakarta Sans ExtraBold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label style="-fx-text-fill: #FFFFFF;" text="50">
-                           <StackPane.margin>
-                              <Insets bottom="65.0" left="190.0" top="6.0" />
-                           </StackPane.margin>
-                           <font>
-                              <Font name="Plus Jakarta Sans ExtraBold" size="32.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane>
-                           <children>
-                              <Arc fill="DODGERBLUE" length="360.0" radiusX="35.0" radiusY="35.0" startAngle="360.0" stroke="#093959" strokeLineCap="ROUND" strokeWidth="7.0" style="-fx-fill: transparent; -fx-opacity: 10;" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="45.0" />
-                              <Arc fill="DODGERBLUE" length="180.0" radiusX="35.0" radiusY="35.0" startAngle="90.0" stroke="#3498db" strokeLineCap="ROUND" strokeWidth="7.0" style="-fx-fill: transparent;" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="45.0" />
-                              <Label alignment="CENTER" layoutX="120.80000305175781" layoutY="59.20000076293945" style="-fx-text-fill: #FFFFFF;" text="50%" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="72.0">
-                                 <font>
-                                    <Font name="Plus Jakarta Sans Medium" size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <StackPane.margin>
-                              <Insets />
-                           </StackPane.margin>
-                           <padding>
-                              <Insets top="4.0" />
-                           </padding>
-                        </AnchorPane>
-                        <Label style="-fx-text-fill: #FFFFFF;" text="100">
-                           <font>
-                              <Font name="Plus Jakarta Sans Medium" size="24.0" />
-                           </font>
-                           <padding>
-                              <Insets left="150.0" top="60.0" />
-                           </padding>
-                           <StackPane.margin>
-                              <Insets />
-                           </StackPane.margin>
-                        </Label>
-                        <Label style="-fx-text-fill: #1877b1; -fx-opacity: 10;" text="Task" textFill="#1877b1">
-                           <font>
-                              <Font name="Plus Jakarta Sans Medium" size="18.0" />
-                           </font>
-                           <StackPane.margin>
-                              <Insets left="153.0" top="90.0" />
-                           </StackPane.margin>
-                        </Label>
-                     </children>
-                     <HBox.margin>
-                        <Insets left="150.0" top="5.0" />
-                     </HBox.margin>
-                  </StackPane>
-               </children>
-            </HBox>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #205781; -fx-text-fill: white; -fx-background-radius: 10; -fx-cursor: hand;" text="Upload New Image">
-               <VBox.margin>
-                  <Insets left="50.0" top="10.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="Plus Jakarta Sans SemiBold" size="13.0" />
-               </font>
-            </Button>
-            <HBox>
-               <VBox.margin>
-                  <Insets left="50.0" top="30.0" />
-               </VBox.margin>
-               <children>
-                  <Label text="Name">
-                     <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets top="5.0" />
-                     </HBox.margin>
-                  </Label>
-                  <TextField prefHeight="39.0" prefWidth="238.0" promptText="User's Name" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@../ImageLoginScreen/PassCustum.css">
-                     <HBox.margin>
-                        <Insets left="170.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                     </font>
-                  </TextField>
-               </children>
-            </HBox>
-            <HBox>
-               <children>
-                  <Label prefHeight="24.0" prefWidth="82.0" text="Projects">
-                     <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets top="5.0" />
-                     </HBox.margin>
-                  </Label>
-                  <ListView prefHeight="30.0" prefWidth="237.0">
-                     <HBox.margin>
-                        <Insets left="140.0" />
-                     </HBox.margin>
-                  </ListView>
-                  <Label prefHeight="24.0" prefWidth="140.0" text="Role in Project">
-                     <font>
-                        <Font name="Plus Jakarta Sans Medium" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </Label>
-               </children>
-               <VBox.margin>
-                  <Insets left="50.0" top="10.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox>
-               <children>
-                  <Label prefHeight="24.0" prefWidth="95.0" text="Password">
-                     <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets top="5.0" />
-                     </HBox.margin>
-                  </Label>
-                  <PasswordField prefHeight="39.0" prefWidth="238.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@../ImageLoginScreen/PassCustum.css">
-                     <font>
-                        <Font name="Montserrat Medium" size="12.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="130.0" />
-                     </HBox.margin>
-                  </PasswordField>
-               </children>
-               <VBox.margin>
                   <Insets left="50.0" top="20.0" />
                </VBox.margin>
-            </HBox>
-            <HBox>
                <children>
-                  <Label prefHeight="24.0" prefWidth="169.0" text="Confirm Password">
+                  <ImageView fx:id="avatarUser" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport></ImageView>
+                  <Button fx:id="uploadNewImageButton" mnemonicParsing="false" onAction="#onUploadNewImageButtonClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-cursor: hand;" text="Upload New Image">
                      <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="18.0" />
+                        <Font name="Plus Jakarta Sans SemiBold" size="13.0" />
                      </font>
                      <HBox.margin>
-                        <Insets top="5.0" />
+                        <Insets left="160.0" />
                      </HBox.margin>
-                  </Label>
-                  <PasswordField prefHeight="39.0" prefWidth="238.0" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: hand;" styleClass="input" stylesheets="@../ImageLoginScreen/PassCustum.css">
-                     <font>
-                        <Font name="Montserrat Medium" size="12.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="56.0" />
-                     </HBox.margin>
-                  </PasswordField>
+                  </Button>
                </children>
+            </HBox>
+            <Label fx:id="titleName1" text="Change Information">
+               <font>
+                  <Font name="Plus Jakarta Sans ExtraBold" size="36.0" />
+               </font>
                <VBox.margin>
                   <Insets left="50.0" top="10.0" />
                </VBox.margin>
-            </HBox>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #205781; -fx-text-fill: white; -fx-background-radius: 10; -fx-cursor: hand;" text="Confirm">
-               <font>
-                  <Font name="Plus Jakarta Sans SemiBold" size="13.0" />
-               </font>
+            </Label>
+            <Line endX="255.0" endY="-1.6576536893844604" startX="-100.0" startY="-1.6569277048110962" stroke="#3a6586">
                <VBox.margin>
-                  <Insets left="50.0" top="20.0" />
+                  <Insets left="50.0" />
                </VBox.margin>
-            </Button>
+            </Line>
          </children>
       </VBox>
    </children>
