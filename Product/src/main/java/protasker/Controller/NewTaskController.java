@@ -99,7 +99,6 @@ public class NewTaskController {
             return;
         }
         Task task = new Task(taskName,description, status, project.getName(), user.toUserInfo(),priority);
-        currentUser.getTasksList().add(task);
         if(parentProject.getSelectionModel().getSelectedItem() != null) project.getTasks().add(task);
         FileContact.saveUsersToJson(currentUser);
         if(taskScreenController != null) taskScreenController.loadTasks();

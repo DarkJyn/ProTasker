@@ -6,17 +6,17 @@
       {
         "name": "Project 1",
         "priority": "Low",
-        "description": "a",
+        "description": "Project 1\u0027s Details",
         "leader": {
           "name": "a",
           "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
         },
-        "StartDate": "2025-03-03",
-        "TargetDate": "2025-03-31",
+        "StartDate": "2025-03-17",
+        "TargetDate": "2025-03-24",
         "tasks": [
           {
-            "name": "a",
-            "description": "a",
+            "name": "Task 1 in Proj 1",
+            "description": "dcm java",
             "status": "Done",
             "projectOwn": "Project 1",
             "userOwn": {
@@ -27,19 +27,6 @@
           }
         ],
         "progress": "0%"
-      }
-    ],
-    "tasksList": [
-      {
-        "name": "a",
-        "description": "a",
-        "status": "In Progress",
-        "projectOwn": "Project 1",
-        "userOwn": {
-          "name": "a",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "priority": "Low"
       }
     ],
     "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"

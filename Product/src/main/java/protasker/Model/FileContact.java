@@ -28,7 +28,7 @@ public class FileContact {
                 user.setUsername(currentUser.getUsername());
                 user.setPassword(currentUser.getPassword());
                 user.setProjects(currentUser.getProjects());
-                user.setTasksList(currentUser.getTasksList());
+//                user.setTasksList(currentUser.getTasksList());
                 break;
             }
         }

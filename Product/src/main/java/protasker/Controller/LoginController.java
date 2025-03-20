@@ -45,7 +45,6 @@ public class LoginController{
     @FXML
     void onLogInButtonClick(ActionEvent event) throws IOException {
         User user = Authenticator.checkLogin(usernameTextField.getText(), PasswordTextField.getText());
-
         if(user != null){
             Stage stage = (Stage) logInButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
