@@ -331,7 +331,7 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5484ff" height="198.0" layoutX="26.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="240.0" />
                   <Circle fill="#f5f5f53f" layoutX="48.0" layoutY="74.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#f5f5f53f" layoutX="230.0" layoutY="211.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                  <Button fx:id="contactButton" layoutX="46.0" layoutY="186.0" mnemonicParsing="false" onAction="#onContactButtonClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #5484ff; -fx-background-radius: 10; -fx-cursor: hand;" stylesheets="@CustomButton.css" text="Contact me">
+                  <Button fx:id="contactButton" layoutX="46.0" layoutY="186.0" mnemonicParsing="false" onAction="#onContactButtonClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #5484ff; -fx-background-radius: 10; -fx-cursor: hand;" text="Contact me">
                      <font>
                         <Font name="Plus Jakarta Sans SemiBold" size="16.0" />
                      </font>
