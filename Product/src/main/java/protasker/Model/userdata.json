@@ -1,24 +1,142 @@
 [
   {
-    "username": "b",
-    "password": "b",
+    "username": "a",
+    "password": "a",
     "projects": [
       {
-        "name": "Project 1",
-        "priority": "Low",
-        "description": "Project 1\u0027s Details",
+        "name": "ProTasker",
+        "priority": "High",
+        "description": "First App made by Java",
         "leader": {
           "name": "a",
           "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
         },
-        "StartDate": "2025-03-17",
-        "TargetDate": "2025-03-24",
+        "StartDate": "2025-03-02",
+        "TargetDate": "2025-03-23",
         "tasks": [
           {
-            "name": "Task 1 in Proj 1",
-            "description": "dcm java",
+            "name": "Draw UML",
+            "description": "Draw Class Diagram and Activity Diagram",
+            "status": "Done",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Make UI",
+            "description": "Design UI for ProTasker",
+            "status": "Done",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Medium"
+          },
+          {
+            "name": "Code Flow and Logic",
+            "description": "Back code",
             "status": "In Progress",
-            "projectOwn": "Project 1",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          },
+          {
+            "name": "Make Database",
+            "description": "JSON file",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "50%",
+        "searchValue": true
+      },
+      {
+        "name": "SeaBattle",
+        "priority": "Medium",
+        "description": "First Console Game made by Java\n",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2024-12-09",
+        "TargetDate": "2025-02-08",
+        "tasks": [
+          {
+            "name": "Draw UML",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Code Logic",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "50%",
+        "searchValue": true
+      },
+      {
+        "name": "DSA_PTIT repos",
+        "priority": "Low",
+        "description": "Solve all DSA task in CodePTIT ",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-03-21",
+        "TargetDate": "2025-05-31",
+        "tasks": [
+          {
+            "name": "Solve DSA001",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "DSA_PTIT repos",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Solve DSA002",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "DSA_PTIT repos",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Solve DSA003",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "DSA_PTIT repos",
             "userOwn": {
               "name": "a",
               "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
@@ -26,7 +144,22 @@
             "priority": "Low"
           }
         ],
-        "progress": "0%"
+        "progress": "0%",
+        "searchValue": true
+      },
+      {
+        "name": "C++_CODEPTIT repo",
+        "priority": "Medium",
+        "description": "Solve all C++ task\n",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-03-02",
+        "TargetDate": "2025-03-31",
+        "tasks": [],
+        "progress": "0%",
+        "searchValue": true
       }
     ],
     "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"

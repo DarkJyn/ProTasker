@@ -35,14 +35,14 @@
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../ImageDashBoard/overview.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="overviewLabelInDashBoard" accessibleRole="BUTTON" onMouseClicked="#onOverviewClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Overview">
@@ -54,15 +54,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="70.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #D9EAFD; -fx-background-radius: 10;">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../ImageDashBoard/list-check.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Tasks">
@@ -74,15 +77,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../ImageDashBoard/cube.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="projectScreen" accessibleRole="BUTTON" onMouseClicked="#onProjectScreenClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Project">
@@ -94,15 +100,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../ImageDashBoard/user.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="profileScreen" accessibleRole="BUTTON" onMouseClicked="#onProfileScreenClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Profile">
@@ -114,15 +123,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="238.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="175.0">
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../ImageDashBoard/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="logOut" accessibleRole="BUTTON" onMouseClicked="#onLogOutClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Log Out">
@@ -134,6 +146,9 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="200.0" />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>
@@ -211,12 +226,12 @@
                   <Insets left="10.0" right="17.0" top="10.0" />
                </VBox.margin>
             </HBox>
-            <ScrollPane prefHeight="522.0" prefWidth="786.0" stylesheets="@../../ImageDashBoard/MenuBarCustom.css">
+            <ScrollPane prefHeight="522.0" prefWidth="786.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9;" stylesheets="@../../ImageDashBoard/MenuBarCustom.css">
                <VBox.margin>
                   <Insets bottom="15.0" left="10.0" top="15.0" />
                </VBox.margin>
                <content>
-                  <VBox fx:id="vbox" prefHeight="936.0" prefWidth="666.0" spacing="10.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@../../ImageDashBoard/MenuBarCustom.css">
+                  <VBox fx:id="vbox" prefHeight="936.0" prefWidth="666.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9; -fx-background-radius: 10;" stylesheets="@../../ImageDashBoard/MenuBarCustom.css">
                      <children>
                         <VBox prefHeight="92.0" prefWidth="382.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
                            <children>

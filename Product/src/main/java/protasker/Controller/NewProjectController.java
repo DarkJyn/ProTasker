@@ -53,7 +53,6 @@ public class NewProjectController {
 
     @FXML
     void onConfirmButtonClick(ActionEvent event) throws IOException {
-
         String projectName = projectNameField.getText();
         String projectLeaderName = currentUser.getUsername();
         String status = statusOfProject.getValue();
@@ -64,6 +63,12 @@ public class NewProjectController {
         if (projectName.isEmpty()  || projectLeaderName.isEmpty() || startDate.isEmpty() || targetDate.isEmpty() || priority == null || status == null) {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
+        }
+        for(Project project : currentUser.getProjects()) {
+            if (project.getName().equals(projectName)) {
+                showAlert("Error", "Project's Name used", Alert.AlertType.ERROR);
+                return;
+            }
         }
         Project newProject = new Project(projectName, priority, description, currentUser.toUserInfo(), startDate, targetDate);
         currentUser.getProjects().add(newProject);

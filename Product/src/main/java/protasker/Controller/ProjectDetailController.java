@@ -91,7 +91,7 @@ public class ProjectDetailController {
         controller.setParentProject(projects);
         Stage stage = new Stage(); // p cửa sổ mới
         stage.setTitle("New Task");
-        stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ
+        stage.setScene(new Scene(root, 665, 250)); // Đặt kích thước cửa sổ
         stage.show();
     }
     @FXML

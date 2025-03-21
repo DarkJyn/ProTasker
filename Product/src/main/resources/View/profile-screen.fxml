@@ -37,14 +37,14 @@
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../ImageDashBoard/overview.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="overviewLabelInDashBoard" accessibleRole="BUTTON" onMouseClicked="#onOverviewClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Overview">
@@ -56,15 +56,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="70.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../ImageDashBoard/list-check.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="taskScreen" accessibleRole="BUTTON" onMouseClicked="#onTaskClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Tasks">
@@ -76,15 +79,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../ImageDashBoard/cube.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="projectScreen" accessibleRole="BUTTON" onMouseClicked="#onProjectClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Project">
@@ -96,15 +102,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #D9EAFD; -fx-background-radius: 10;">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../ImageDashBoard/user.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label accessibleRole="BUTTON" prefHeight="11.0" prefWidth="90.0" text="Profile">
@@ -116,15 +125,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="238.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../ImageDashBoard/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="logOut" accessibleRole="BUTTON" onMouseClicked="#onLogOutClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Log Out">
@@ -136,6 +148,9 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="200.0" />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>

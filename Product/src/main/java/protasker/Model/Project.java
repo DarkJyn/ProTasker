@@ -13,9 +13,10 @@ public class Project {
     String TargetDate;
     ArrayList<Task> tasks = new ArrayList<>();
     String progress;
-
+    Boolean searchValue = true;
     public Project(String name, String priority, String description, UserInfo leader, String startDate, String targetDate) {
         this.name = name;
+        searchValue = true;
         this.priority = priority;
         this.description = description;
         this.leader = leader;
@@ -27,6 +28,7 @@ public class Project {
         return LocalDate.parse(TargetDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
     public int getProgressAsInt() {
+        getProgress();
         return Integer.parseInt(progress.replace("%", ""));
     }
     public int getPriorityAsInt() {
@@ -42,6 +44,12 @@ public class Project {
     }
     public UserInfo getLeader() {
         return leader;
+    }
+    public void setSearchValue(Boolean searchValue) {
+        this.searchValue = searchValue;
+    }
+    public Boolean getSearchValue() {
+        return searchValue;
     }
     public String getStartDate() {
         return StartDate;
@@ -67,6 +75,11 @@ public class Project {
     public ArrayList<Task> getTasks() {
         return tasks;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
     public String getPriority() {
         return priority;
     }

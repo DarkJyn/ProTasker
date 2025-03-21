@@ -1,0 +1,12 @@
+.button:hover {
+    -fx-background-color: transparent;
+}
+
+.button:hover .text {
+    -fx-text-fill: #007ACC;
+}
+
+.button:hover svg path {
+    /* JavaFX không hỗ trợ SVG trực tiếp trong CSS, nếu bạn dùng ImageView, hãy thay đổi -fx-fill */
+    -fx-fill: #007ACC;
+}
