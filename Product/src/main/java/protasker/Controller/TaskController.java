@@ -33,6 +33,15 @@ public class TaskController {
         userOwn = currentUser;
     }
 
+    TaskScreenController taskScreenController;
+    void setTaskScreenController(TaskScreenController taskScreenController) {
+        this.taskScreenController = taskScreenController;
+    }
+    ProjectDetailController projectDetailController;
+    void setProjectDetailController(ProjectDetailController projectDetailController) {
+        this.projectDetailController = projectDetailController;
+    }
+
     void setData(Task task){
         taskName.setText(task.getName());
         taskDecrip.setText(task.getDescription());
@@ -46,19 +55,20 @@ public class TaskController {
             task.setStatus(newValue); // Cập nhật status trong Task
             taskStatus.setPromptText(newValue); // Hiển thị trạng thái mới
             FileContact.saveUsersToJson(userOwn);
+            if(taskScreenController != null){
+                try {
+                    taskScreenController.loadTasks();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if(projectDetailController != null){
+                try {
+                    projectDetailController.loadAllTasks();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         });
-    }
-    TaskScreenController taskScreenController;
-    void setTaskScreenController(TaskScreenController taskScreenController) {
-        this.taskScreenController = taskScreenController;
-    }
-    @FXML
-    void initialize() throws IOException {
-        assert taskDecrip != null : "fx:id=\"taskDecrip\" was not injected: check your FXML file 'task.fxml'.";
-        assert taskName != null : "fx:id=\"taskName\" was not injected: check your FXML file 'task.fxml'.";
-        assert taskProjectNameOwn != null : "fx:id=\"taskProjectNameOwn\" was not injected: check your FXML file 'task.fxml'.";
-        assert taskStatus != null : "fx:id=\"taskStatus\" was not injected: check your FXML file 'task.fxml'.";
-        assert userAvaPath != null : "fx:id=\"userAvaPath\" was not injected: check your FXML file 'task.fxml'.";
-
     }
 }

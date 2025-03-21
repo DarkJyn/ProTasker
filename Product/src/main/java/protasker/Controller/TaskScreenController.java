@@ -48,6 +48,7 @@ public class TaskScreenController {
                 TaskController controller = loader.getController();
                 controller.setCurrentProject(currentUser);
                 controller.setData(task);
+                controller.setTaskScreenController(this);
                 vbox.getChildren().add(vboxItem);
             }
         }
@@ -122,6 +123,7 @@ public class TaskScreenController {
                         TaskController controller = loader.getController();
                         controller.setCurrentProject(currentUser);
                         controller.setData(task);
+                        controller.setTaskScreenController(this);
                         vbox.getChildren().add(vboxItem);
                     }
                 }
@@ -141,6 +143,7 @@ public class TaskScreenController {
                         TaskController controller = loader.getController();
                         controller.setCurrentProject(currentUser);
                         controller.setData(task);
+                        controller.setTaskScreenController(this);
                         vbox.getChildren().add(vboxItem);
                     }
                 }

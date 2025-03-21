@@ -5,7 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -16,6 +19,7 @@ import protasker.Model.FileContact;
 import protasker.Model.User;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class ProfileScreenController {
 
@@ -75,7 +79,6 @@ public class ProfileScreenController {
     @FXML
     void initialize() {
         assert avatarUser != null : "fx:id=\"avatarUser\" was not injected: check your FXML file 'project-screen.fxml'.";
-
         Rectangle rect = new Rectangle(200,200);
         avatarUser.setClip(rect);
     }
@@ -97,5 +100,36 @@ public class ProfileScreenController {
             avatarUser.setImage(image);
             FileContact.saveUsersToJson(currentUser);
         }
+    }
+    @FXML
+    private PasswordField newPasswordField;
+    @FXML
+    private Button onConfirmButton;
+    @FXML
+    private PasswordField oldPasswordField;
+    @FXML
+    private TextField usernameTextField;
+    @FXML
+    void onConfirmButtonClick(ActionEvent event) {
+        List<User> usersList = FileContact.loadUserFromJson();
+        for (User user : usersList){
+            if (user.getUsername().equals(currentUser.getUsername())){
+                if(usernameTextField.getText() != null && oldPasswordField.getText().equals(user.getPassword()) && newPasswordField.getText() != null ){
+                    currentUser.setUsername(usernameTextField.getText());
+                    currentUser.setPassword(newPasswordField.getText());
+                    System.out.println("Change User info done");
+                }
+//                user.setUserAvatarPath(currentUser.getUserAvatarPath());
+                user.setUsername(currentUser.getUsername());
+                user.setPassword(currentUser.getPassword());
+//                user.setProjects(currentUser.getProjects());
+//                user.setTasksList(currentUser.getTasksList());
+                break;
+            }
+        }
+        FileContact.writeUsersToJson(usersList);
+        newPasswordField.clear();
+        oldPasswordField.clear();
+        usernameTextField.clear();
     }
 }

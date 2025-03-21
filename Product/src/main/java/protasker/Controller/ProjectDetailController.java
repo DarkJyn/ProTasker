@@ -111,6 +111,7 @@ public class ProjectDetailController {
                 TaskController controller = loader.getController();
                 controller.setCurrentProject(currentUser);
                 controller.setData(task);
+                controller.setProjectDetailController(this);
                 vbox.getChildren().add(vboxItem);
             }
         }
@@ -169,6 +170,7 @@ public class ProjectDetailController {
                     TaskController controller = loader.getController();
                     controller.setCurrentProject(currentUser);
                     controller.setData(task);
+                    controller.setProjectDetailController(this);
                     vbox.getChildren().add(vboxItem);
                 }
             }
@@ -185,6 +187,7 @@ public class ProjectDetailController {
                     TaskController controller = loader.getController();
                     controller.setCurrentProject(currentUser);
                     controller.setData(task);
+                    controller.setProjectDetailController(this);
                     vbox.getChildren().add(vboxItem);
                 }
             }
