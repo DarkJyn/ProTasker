@@ -1,17 +1,21 @@
 package protasker.Model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class Task {
     String name;
     String description;
     String status;
-    Project projectOwn;
-    User userOwn;
+    String projectOwn;
+    UserInfo userOwn;
     String priority;
-
-    public Task(String name, String description, String status, Project projectOwn, User userOwn,String priority) {
+    transient StringProperty statusProperty = new SimpleStringProperty();
+    public Task(String name, String description, String status, String projectOwn, UserInfo userOwn,String priority) {
         this.name = name;
         this.description = description;
         this.status = status;
+        this.statusProperty.set(status);
         this.projectOwn = projectOwn;
         this.priority = priority;
         this.userOwn = userOwn;
@@ -28,26 +32,24 @@ public class Task {
     public String getStatus() {
         return status;
     }
-
-    public Project getProjectOwn() {
+    public void setStatus(String status) {
+        this.status = status;
+        statusProperty = new SimpleStringProperty(status);
+//        statusProperty.set(this.status);
+    }
+    public String getProjectOwn() {
         return projectOwn;
     }
 
-    public User getUserOwn() {
+    public UserInfo getUserOwn() {
         return userOwn;
     }
 
-    public void setUserOwn(User userOwn) {
-        this.userOwn = userOwn;
-    }
-
-    public void setProjectOwn(Project projectOwn) {
+    public void setProjectOwn(String projectOwn) {
         this.projectOwn = projectOwn;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+
 
     public void setDescription(String description) {
         this.description = description;

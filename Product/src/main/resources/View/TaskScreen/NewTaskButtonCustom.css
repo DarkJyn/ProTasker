@@ -1,0 +1,23 @@
+/* Button mặc định */
+.custom-button {
+    -fx-text-fill: #fff;
+    -fx-background-color: #4a90e2;
+    -fx-font-size: 14px;
+    -fx-font-family: "Plus Jakarta Sans Medium";
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0.5, 0, 0);
+    -fx-transition: all 0.3s ease;
+    -fx-cursor: hand;
+    -fx-focus-traversable: false;
+}
+
+/* Hover: Đổi màu và hiệu ứng bóng */
+.custom-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(74, 144, 226, 0.6), 20, 0.5, 0, 0);
+}
+
+/* Khi nhấn xuống */
+.custom-button:pressed {
+    -fx-translate-y: -1px;
+}

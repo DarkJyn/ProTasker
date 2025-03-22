@@ -1,0 +1,6 @@
+.text{
+    -fx-fill: black;
+}
+.text:hover{
+    -fx-fill: #3498db;
+}

@@ -20,7 +20,7 @@
                <children>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageLoginScreen/logo.png" />
+                        <Image url="@../ImageLoginScreen/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" />
@@ -36,14 +36,14 @@
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/overview.png" />
+                        <Image url="@../DashBoard/Image/overview.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="overviewLabelInDashBoard" accessibleRole="BUTTON" onMouseClicked="#onOverviewClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Overview">
@@ -55,15 +55,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="70.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/list-check.png" />
+                        <Image url="@../DashBoard/Image/list-check.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="taskScreen" accessibleRole="BUTTON" onMouseClicked="#onTaskClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Tasks">
@@ -75,15 +78,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #D9EAFD; -fx-background-radius: 10;">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/cube.png" />
+                        <Image url="@../DashBoard/Image/cube.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="projectScreen" accessibleRole="BUTTON" onMouseClicked="#onProjectScreenClick" prefHeight="11.0" prefWidth="90.0" text="Project">
@@ -98,15 +104,18 @@
                      </cursor>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/user.png" />
+                        <Image url="@../DashBoard/Image/user.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="profileScreen" accessibleRole="BUTTON" onMouseClicked="#onProfileScreenClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Profile">
@@ -118,15 +127,18 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_LEFT" prefHeight="238.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/sign-out-alt.png" />
+                        <Image url="@../DashBoard/Image/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </ImageView>
                   <Label fx:id="logOut" accessibleRole="BUTTON" onMouseClicked="#onLogOutClick" prefHeight="11.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Log Out">
@@ -138,6 +150,9 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="200.0" />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>
@@ -147,7 +162,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/cube.png" />
+                        <Image url="@../DashBoard/Image/cube.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="20.0" />
@@ -163,7 +178,7 @@
                   </Label>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/badge-percent.png" />
+                        <Image url="@../DashBoard/Image/badge-percent.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" />
@@ -182,14 +197,14 @@
                         <Insets />
                      </HBox.margin>
                   </Line>
-                  <Button fx:id="newTaskButton" mnemonicParsing="false" onAction="#onNewTaskButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="New Task">
+                  <Button fx:id="newTaskButton" mnemonicParsing="false" onAction="#onNewTaskButtonClick" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="New Task">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/plus.png" />
+                              <Image url="@../DashBoard/Image/plus.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -204,14 +219,14 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="691.0">
                <children>
-                  <Button fx:id="showAllTaskButton" mnemonicParsing="false" onAction="#onShowAllTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="All tasks">
+                  <Button fx:id="showAllTaskButton" mnemonicParsing="false" onAction="#onShowAllTaskButton" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="All tasks">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/note.png" />
+                              <Image url="@../DashBoard/Image/note.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -227,14 +242,14 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="showActiveTaskButton" mnemonicParsing="false" onAction="#onShowActiveTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Active">
+                  <Button fx:id="showActiveTaskButton" mnemonicParsing="false" onAction="#onShowActiveTaskButton" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="Active">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/clone.png" />
+                              <Image url="@../DashBoard/Image/clone.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -250,14 +265,14 @@
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                   </Label>
-                  <Button fx:id="showDoneTaskButton" mnemonicParsing="false" onAction="#onShowDoneTaskButton" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Done">
+                  <Button fx:id="showDoneTaskButton" mnemonicParsing="false" onAction="#onShowDoneTaskButton" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="Done">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/checkbox%20(1).png" />
+                              <Image url="@../DashBoard/Image/checkbox%20(1).png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -275,12 +290,12 @@
                   </Label>
                </children>
             </HBox>
-            <ScrollPane prefHeight="452.0" prefWidth="681.0" stylesheets="@../../ImageDashBoard/MenuBarCustom.css">
+            <ScrollPane prefHeight="452.0" prefWidth="681.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9;" stylesheets="@../DashBoard/MenuBarCustom.css">
                <VBox.margin>
                   <Insets bottom="15.0" left="10.0" />
                </VBox.margin>
                <content>
-                  <VBox fx:id="vbox" prefHeight="600.0" prefWidth="667.0" spacing="10.0" />
+                  <VBox fx:id="vbox" prefHeight="600.0" prefWidth="667.0" spacing="10.0" style="-fx-background-color: #faf9f9;" />
                </content>
             </ScrollPane>
          </children>

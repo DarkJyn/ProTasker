@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import protasker.Model.Project;
@@ -27,13 +26,10 @@ public class TaskScreenController {
 
     @FXML
     private Label projectScreen;
-
     private User currentUser;
-    private ArrayList<Task> tasks = new ArrayList<>();
     private ArrayList<Project> projects = new ArrayList<>();
     public void setCurrentUser(User currentUser) throws IOException {
         this.currentUser = currentUser;
-        tasks = currentUser.getTasksList();
         projects = currentUser.getProjects();
         System.out.println("set user in dash board succesful");
         loadTasks();
@@ -42,18 +38,22 @@ public class TaskScreenController {
     private VBox vbox;
     public void loadTasks() throws IOException {
         vbox.getChildren().clear();
-        for (Task task : tasks){
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
-            VBox vboxItem = loader.load();
-            TaskController controller = loader.getController();
-            controller.setData(task);
-            vbox.getChildren().add(vboxItem);
+        for(Project project : projects) {
+            for (Task task : project.getTasks()){
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                VBox vboxItem = loader.load();
+                TaskController controller = loader.getController();
+                controller.setCurrentProject(currentUser);
+                controller.setData(task);
+                controller.setTaskScreenController(this);
+                vbox.getChildren().add(vboxItem);
+            }
         }
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
         Parent root = loader.load();
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
@@ -65,7 +65,7 @@ public class TaskScreenController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -100,7 +100,7 @@ public class TaskScreenController {
         controller.setParentProject(projects);
         Stage stage = new Stage(); // Tạo cửa sổ mới
         stage.setTitle("New Task");
-        stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ
+        stage.setScene(new Scene(root, 665, 250)); // Đặt kích thước cửa sổ
         stage.show();
     }
 
@@ -111,15 +111,19 @@ public class TaskScreenController {
 
     public void onShowActiveTaskButton(ActionEvent actionEvent) throws IOException {
         vbox.getChildren().clear();
-        if(tasks!= null) {
-            for (Task task : tasks){
-                if(task.getStatus().equals("In Progress")) {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
-                    VBox vboxItem = loader.load();
-                    TaskController controller = loader.getController();
-                    controller.setData(task);
-                    vbox.getChildren().add(vboxItem);
+        for(Project project : projects) {
+            if(project.getTasks() != null) {
+                for (Task task : project.getTasks()){
+                    if(task.getStatus().equals("In Progress")) {
+                        FXMLLoader loader = new FXMLLoader();
+                        loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                        VBox vboxItem = loader.load();
+                        TaskController controller = loader.getController();
+                        controller.setCurrentProject(currentUser);
+                        controller.setData(task);
+                        controller.setTaskScreenController(this);
+                        vbox.getChildren().add(vboxItem);
+                    }
                 }
             }
         }
@@ -127,15 +131,19 @@ public class TaskScreenController {
 
     public void onShowDoneTaskButton(ActionEvent actionEvent) throws IOException {
         vbox.getChildren().clear();
-        if(tasks!= null) {
-            for (Task task : tasks){
-                if(task.getStatus().equals("Done")) {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
-                    VBox vboxItem = loader.load();
-                    TaskController controller = loader.getController();
-                    controller.setData(task);
-                    vbox.getChildren().add(vboxItem);
+        for(Project project : projects) {
+            if(project.getTasks() != null) {
+                for (Task task : project.getTasks()) {
+                    if (task.getStatus().equals("Done")) {
+                        FXMLLoader loader = new FXMLLoader();
+                        loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
+                        VBox vboxItem = loader.load();
+                        TaskController controller = loader.getController();
+                        controller.setCurrentProject(currentUser);
+                        controller.setData(task);
+                        controller.setTaskScreenController(this);
+                        vbox.getChildren().add(vboxItem);
+                    }
                 }
             }
         }

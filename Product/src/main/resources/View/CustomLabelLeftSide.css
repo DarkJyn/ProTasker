@@ -1,0 +1,6 @@
+
+.hover-box:hover {
+    -fx-background-color: #D9EAFD; /* Đổi màu nền khi hover */
+    -fx-background-radius: 10px;
+    -fx-cursor: hand; /* Đổi con trỏ thành hình bàn tay */
+}

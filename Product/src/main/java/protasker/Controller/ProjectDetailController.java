@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -62,7 +61,6 @@ public class ProjectDetailController {
 
     User currentUser;
     Project project;
-
     void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
     }
@@ -76,7 +74,7 @@ public class ProjectDetailController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
@@ -91,7 +89,7 @@ public class ProjectDetailController {
         controller.setParentProject(projects);
         Stage stage = new Stage(); // p cửa sổ mới
         stage.setTitle("New Task");
-        stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ
+        stage.setScene(new Scene(root, 665, 250)); // Đặt kích thước cửa sổ
         stage.show();
     }
     @FXML
@@ -109,7 +107,9 @@ public class ProjectDetailController {
                 loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                 VBox vboxItem = loader.load();
                 TaskController controller = loader.getController();
+                controller.setCurrentProject(currentUser);
                 controller.setData(task);
+                controller.setProjectDetailController(this);
                 vbox.getChildren().add(vboxItem);
             }
         }
@@ -121,7 +121,7 @@ public class ProjectDetailController {
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
         Parent root = loader.load();
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
@@ -166,7 +166,9 @@ public class ProjectDetailController {
                     loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                     VBox vboxItem = loader.load();
                     TaskController controller = loader.getController();
+                    controller.setCurrentProject(currentUser);
                     controller.setData(task);
+                    controller.setProjectDetailController(this);
                     vbox.getChildren().add(vboxItem);
                 }
             }
@@ -181,7 +183,9 @@ public class ProjectDetailController {
                     loader.setLocation(getClass().getResource("/View/TaskScreen/task.fxml"));
                     VBox vboxItem = loader.load();
                     TaskController controller = loader.getController();
+                    controller.setCurrentProject(currentUser);
                     controller.setData(task);
+                    controller.setProjectDetailController(this);
                     vbox.getChildren().add(vboxItem);
                 }
             }

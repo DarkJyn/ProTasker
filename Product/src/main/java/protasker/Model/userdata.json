@@ -1,0 +1,190 @@
+[
+  {
+    "username": "a",
+    "password": "a",
+    "projects": [
+      {
+        "name": "SeaBattle",
+        "priority": "Medium",
+        "description": "First Console Game made by Java\n",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2024-12-09",
+        "TargetDate": "2025-02-08",
+        "tasks": [
+          {
+            "name": "Draw UML",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Code Logic",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "100%",
+        "searchValue": true
+      },
+      {
+        "name": "ProTasker",
+        "priority": "High",
+        "description": "First App made by Java",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-03-02",
+        "TargetDate": "2025-03-23",
+        "tasks": [
+          {
+            "name": "Draw UML",
+            "description": "Draw Class Diagram and Activity Diagram",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Make UI",
+            "description": "Design UI for ProTasker",
+            "status": "Done",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Medium"
+          },
+          {
+            "name": "Code Flow and Logic",
+            "description": "Back code",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          },
+          {
+            "name": "Make Database",
+            "description": "JSON file",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          },
+          {
+            "name": "a",
+            "description": "a",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\z6404420434409_693d624ec7200a0aacd0f4636e2df43e.jpg"
+            },
+            "priority": "Low"
+          }
+        ],
+        "progress": "20%",
+        "searchValue": true
+      },
+      {
+        "name": "C++_CODEPTIT repo",
+        "priority": "Medium",
+        "description": "Solve all C++ task\n",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-03-02",
+        "TargetDate": "2025-03-31",
+        "tasks": [],
+        "progress": "0%",
+        "searchValue": true
+      },
+      {
+        "name": "DSA_PTIT repos",
+        "priority": "Low",
+        "description": "Solve all DSA task in CodePTIT ",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-03-21",
+        "TargetDate": "2025-05-31",
+        "tasks": [
+          {
+            "name": "Solve DSA001",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "DSA_PTIT repos",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Solve DSA002",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "DSA_PTIT repos",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Solve DSA003",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "DSA_PTIT repos",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          }
+        ],
+        "progress": "33%",
+        "searchValue": true
+      }
+    ],
+    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+  },
+  {
+    "username": "b",
+    "password": "b",
+    "projects": [],
+    "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+  },
+  {
+    "username": "c",
+    "password": "c",
+    "projects": [],
+    "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+  }
+]

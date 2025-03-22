@@ -25,7 +25,7 @@
       </TextField>
       <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="666.0">
          <children>
-            <ComboBox fx:id="statusOfProject" prefHeight="26.0" prefWidth="114.0" promptText="Status" style="-fx-cursor: hand;">
+            <ComboBox fx:id="statusOfProject" prefHeight="26.0" prefWidth="114.0" promptText="Status" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -36,7 +36,7 @@
                   </FXCollections>
                </items>
             </ComboBox>
-            <ComboBox fx:id="priorityOfProject" prefHeight="26.0" prefWidth="96.0" promptText="Priority" style="-fx-cursor: hand;">
+            <ComboBox fx:id="priorityOfProject" prefHeight="26.0" prefWidth="102.0" promptText="Priority" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -48,17 +48,12 @@
                   </FXCollections>
                </items>
             </ComboBox>
-            <ComboBox fx:id="projectLeader" prefHeight="26.0" prefWidth="96.0" promptText="Leader" style="-fx-cursor: hand;">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </ComboBox>
-            <DatePicker fx:id="startDateOfProject" prefHeight="26.0" prefWidth="106.0" promptText="Start Date" style="-fx-cursor: hand;">
+            <DatePicker fx:id="startDateOfProject" prefHeight="26.0" prefWidth="106.0" promptText="Start Date" style="-fx-cursor: hand;" stylesheets="@../DatePickerCustom.css">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
             </DatePicker>
-            <DatePicker fx:id="targerDateOfProject" prefHeight="26.0" prefWidth="106.0" promptText="Target Date" style="-fx-cursor: hand;">
+            <DatePicker fx:id="targerDateOfProject" prefHeight="26.0" prefWidth="106.0" promptText="Target Date" style="-fx-cursor: hand;" stylesheets="@../DatePickerCustom.css">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -78,7 +73,7 @@
       </TextArea>
       <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="650.0">
          <children>
-            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Confirm">
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #3498db; -fx-background-radius: 10;" text="Confirm">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
@@ -86,7 +81,7 @@
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Cancel">
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #3498db; -fx-background-radius: 10;" text="Cancel">
                <font>
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -34,7 +37,7 @@
             </VBox>
             <ImageView fx:id="userAvaPath" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../ImageDashBoard/avatar.jpg" />
+                  <Image url="@../DashBoard/Image/avatar.jpg" />
                </image>
                <HBox.margin>
                   <Insets top="10.0" />
@@ -46,35 +49,42 @@
          <children>
             <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../ImageDashBoard/clone.png" />
+                  <Image url="@../DashBoard/Image/clone%20(2).png" />
                </image>
                <HBox.margin>
                   <Insets left="25.0" />
                </HBox.margin>
             </ImageView>
-            <Label fx:id="taskStatus" prefHeight="19.0" prefWidth="273.0" text="Task' Status">
-               <font>
-                  <Font name="Plus Jakarta Sans Medium" size="14.0" />
-               </font>
+            <ComboBox fx:id="taskStatus" prefWidth="150.0" promptText="Task's Status" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
-            </Label>
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="In Progress" />
+                     <String fx:value="Done" />
+                     <String fx:value="Cancel" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../ImageDashBoard/cube.png" />
+                  <Image url="@../DashBoard/Image/cube.png" />
                </image>
                <HBox.margin>
-                  <Insets left="50.0" />
+                  <Insets left="150.0" />
                </HBox.margin>
             </ImageView>
-            <Label fx:id="taskProjectNameOwn" text="Project's Name">
+            <Label fx:id="taskProjectNameOwn" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Project's Name">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
                <font>
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
             </Label>
          </children>
          <VBox.margin>

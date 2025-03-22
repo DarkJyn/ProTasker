@@ -1,0 +1,22 @@
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #3498db; /* Màu thanh trượt */
+    -fx-background-radius: 5px;
+}
+.scroll-bar:vertical .track {
+    -fx-background-color:  #faf9f9; /* Màu nền đường chạy */
+    -fx-background-radius: 5px;
+    -fx-border-color: #faf9f9;
+
+}
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-opacity: 0; /* Ẩn nút */
+    -fx-padding: 0;
+    -fx-background-color: #faf9f9;
+}
+.scroll-bar:vertical {
+    -fx-pref-width: 8px; /* Độ rộng */
+}
+.scroll-bar .thumb {
+    -fx-background-radius: 10px; /* Bo tròn */
+}

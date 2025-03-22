@@ -21,7 +21,6 @@ import java.util.Comparator;
 public class ProjectScreenController{
     @FXML
     private Label overviewLabelInDashBoard;
-
     @FXML
     private Label profileScreen;
     @FXML
@@ -31,6 +30,7 @@ public class ProjectScreenController{
 
     private User currentUser;
     private ArrayList<Project> projects = new ArrayList<>();
+
     public void setCurrentUser(User currentUser) throws IOException {
         this.currentUser = currentUser;
         projects = currentUser.getProjects();
@@ -45,6 +45,7 @@ public class ProjectScreenController{
             HBox hbox = loader.load();
             System.out.println("test");
             ProjectHboxController controller = loader.getController();
+            controller.setCurrentUser(currentUser);
             controller.setProject(project);
             controller.setData(project);
             vbox.getChildren().add(hbox);
@@ -52,7 +53,7 @@ public class ProjectScreenController{
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
         Parent root = loader.load();
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
@@ -64,7 +65,7 @@ public class ProjectScreenController{
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -96,7 +97,6 @@ public class ProjectScreenController{
         NewProjectController controller = fxmlLoader.getController();
         controller.setCurrentUser(currentUser);
         controller.setProjectScreenController(this);
-
         Stage stage = new Stage(); // Tạo cửa sổ mới
         stage.setTitle("New Project");
         stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ

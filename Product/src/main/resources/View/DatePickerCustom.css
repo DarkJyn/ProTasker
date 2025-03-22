@@ -1,0 +1,45 @@
+.date-picker {
+    -fx-background-color: #3498db;  /* Màu nền */
+    -fx-border-color: #3498db;      /* Viền */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.date-picker .text-field {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+.date-picker .arrow-button {
+    -fx-background-color: #3498db;
+}
+.date-picker .arrow-button:hover {
+    -fx-background-color: #1f618d;
+}
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-border-color: #3498db;
+    -fx-border-radius: 5px;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-cell {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #1f618dư;
+    -fx-text-fill: white;
+}
+.date-picker-popup .day-cell.today {
+    -fx-background-color: #f39c12; /* Màu cho ngày hiện tại */
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #e74c3c; /* Màu cho ngày được chọn */
+    -fx-text-fill: white;
+}

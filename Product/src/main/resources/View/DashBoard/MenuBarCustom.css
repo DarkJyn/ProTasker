@@ -1,0 +1,29 @@
+/* Ẩn mũi tên trên và dưới của ScrollBar */
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+/* Tùy chỉnh thanh cuộn (track) */
+.scroll-bar:vertical .track {
+    -fx-background-color: #f2f2f2; /* Màu nền nhạt */
+    -fx-background-radius: 5px;
+}
+
+/* Tùy chỉnh thanh trượt (thumb) */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4a90e2; /* Màu xanh dương */
+    -fx-background-radius: 10px; /* Bo tròn */
+    -fx-pref-width: 8px; /* Độ rộng thanh trượt */
+}
+
+/* Khi hover vào thanh trượt */
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #357ABD; /* Màu xanh đậm hơn */
+}
+
+/* Khi bấm vào thanh trượt */
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #2B5C8A; /* Màu xanh đậm */
+}
