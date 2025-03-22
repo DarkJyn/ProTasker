@@ -1,6 +1,6 @@
 [
   {
-    "username": "a",
+    "username": "admin",
     "password": "a",
     "projects": [
       {
@@ -186,5 +186,204 @@
     "password": "c",
     "projects": [],
     "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+  },
+  {
+    "username": "dangvu",
+    "password": "a",
+    "projects": [
+      {
+        "name": "SeaBattle",
+        "priority": "Medium",
+        "description": "console game\n",
+        "leader": {
+          "name": "admin1",
+          "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+        },
+        "StartDate": "2025-03-02",
+        "TargetDate": "2025-03-04",
+        "tasks": [
+          {
+            "name": "Task 1 ",
+            "description": "tesst",
+            "status": "Done",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "admin1",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+            },
+            "priority": "Low"
+          }
+        ],
+        "progress": "100%",
+        "searchValue": true
+      },
+      {
+        "name": "ProTasker",
+        "priority": "High",
+        "description": "Make a JavaApp",
+        "leader": {
+          "name": "admin1",
+          "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+        },
+        "StartDate": "2025-03-03",
+        "TargetDate": "2025-03-24",
+        "tasks": [
+          {
+            "name": "Make UI",
+            "description": "a",
+            "status": "Done",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin1",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+            },
+            "priority": "High"
+          },
+          {
+            "name": "First Task",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin1",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Code Logic",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin1",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "33%",
+        "searchValue": true
+      },
+      {
+        "name": "Clear CodePTIT",
+        "priority": "Medium",
+        "description": "DSA PTIT",
+        "leader": {
+          "name": "admin1",
+          "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+        },
+        "StartDate": "2025-02-25",
+        "TargetDate": "2025-06-30",
+        "tasks": [
+          {
+            "name": "Solve DSA001",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "Clear CodePTIT",
+            "userOwn": {
+              "name": "admin1",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "0%",
+        "searchValue": true
+      }
+    ],
+    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\4498b6ef6034c4402a35ebdb757c9df9.jpg"
+  },
+  {
+    "username": "haidang",
+    "password": "dang",
+    "projects": [
+      {
+        "name": "ProTasker",
+        "priority": "High",
+        "description": "BTCK ProJApp",
+        "leader": {
+          "name": "admin0",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-02-23",
+        "TargetDate": "2025-03-24",
+        "tasks": [
+          {
+            "name": "Make UI",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin0",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Medium"
+          },
+          {
+            "name": "CodeLogic",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin0",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          },
+          {
+            "name": "Draw UML",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin0",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Update Logic",
+            "description": "",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "admin0",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "25%",
+        "searchValue": true
+      },
+      {
+        "name": "Project Mini",
+        "priority": "Low",
+        "description": "a",
+        "leader": {
+          "name": "admin0",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2025-02-24",
+        "TargetDate": "2025-04-01",
+        "tasks": [
+          {
+            "name": "Task random",
+            "description": "a",
+            "status": "Done",
+            "projectOwn": "Project Mini",
+            "userOwn": {
+              "name": "admin0",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          }
+        ],
+        "progress": "100%",
+        "searchValue": true
+      }
+    ],
+    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
   }
 ]
