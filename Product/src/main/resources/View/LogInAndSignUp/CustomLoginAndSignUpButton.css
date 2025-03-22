@@ -1,0 +1,16 @@
+.button{
+    -fx-background-color:  #007ACC;
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+    -fx-border-color:#007ACC;
+    -fx-border-radius: 15px;
+    -fx-text-fill: white;
+}
+.button:hover {
+    -fx-background-color: transparent;
+    -fx-border-color: #007ACC;
+    -fx-text-fill: #007ACC;
+}
+/*.button:hover .text{*/
+/*    -fx-fill: #007ACC;*/
+/*}*/

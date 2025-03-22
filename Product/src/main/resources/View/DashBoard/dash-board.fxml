@@ -44,7 +44,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/overview.png" />
+                        <Image url="@Image/overview.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -63,11 +63,11 @@
                   <Insets left="20.0" right="20.0" top="70.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <HBox fx:id="hbox1" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/list-check.png" />
+                        <Image url="@Image/list-check.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -86,11 +86,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/cube.png" />
+                        <Image url="@Image/cube.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -109,11 +109,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/user.png" />
+                        <Image url="@Image/user.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -132,11 +132,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/sign-out-alt.png" />
+                        <Image url="@Image/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -165,14 +165,14 @@
                </VBox.margin>
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4a90e073" height="50.0" layoutX="25.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 10; -fx-stroke: transparent; -fx-arc-height: 25; -fx-arc-width: 25;" width="360.0" />
-                  <TextField fx:id="searchField" layoutX="68.0" layoutY="22.0" onAction="#handleEnterKey" onMouseClicked="#onSearchClick" prefHeight="42.0" prefWidth="316.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-cursor: hand;" stylesheets="@../ImageDashBoard/SearchboxCustom.css">
+                  <TextField fx:id="searchField" layoutX="68.0" layoutY="22.0" onAction="#handleEnterKey" onMouseClicked="#onSearchClick" prefHeight="42.0" prefWidth="316.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-cursor: text;" stylesheets="@SearchboxCustom.css">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                   </TextField>
                   <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="38.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/search.png" />
+                        <Image url="@Image/search.png" />
                      </image>
                   </ImageView>
                </children>
@@ -190,7 +190,7 @@
                   <Insets left="25.0" right="17.0" top="15.0" />
                </VBox.margin>
                <children>
-                  <Label fx:id="allProjectLabel" onMouseClicked="#onAllProjectLabelClick" style="-fx-cursor: hand;" text="All Projects">
+                  <Label fx:id="allProjectLabel" onMouseClicked="#onAllProjectLabelClick" onMouseEntered="#onAllProjectLabelEnter" onMouseExited="#onAllProjectLabelExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="All Projects">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
@@ -198,29 +198,29 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="priorityLabel" onMouseClicked="#onPriorityLabelClick" style="-fx-cursor: hand;" text="Priority">
+                  <Label fx:id="priorityLabel" onMouseClicked="#onPriorityLabelClick" onMouseEntered="#onPriorityLabelEnter" onMouseExited="#onPriorityLabelExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Priority">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="progressLabel" onMouseClicked="#onProgressLabelClick" style="-fx-cursor: hand;" text="Progress">
+                  <Label fx:id="progressLabel" onMouseClicked="#onProgressLabelClick" onMouseEntered="#onProgressLabelEnter" onMouseExited="#onProgressLabelExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Progress">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="targetDate" onMouseClicked="#onTargetDateClick" style="-fx-cursor: hand;" text="Target Date">
+                  <Label fx:id="targetDate" onMouseClicked="#onTargetDateClick" onMouseEntered="#onTargetDateEnter" onMouseExited="#onTargetDateExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Target Date">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <ScrollPane prefHeight="527.0" prefWidth="413.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9; -fx-background-radius: 25;" stylesheets="@../ImageDashBoard/MenuBarCustom.css">
+            <ScrollPane prefHeight="527.0" prefWidth="413.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9; -fx-background-radius: 25;" stylesheets="@MenuBarCustom.css">
                <VBox.margin>
                   <Insets bottom="15.0" left="10.0" top="5.0" />
                </VBox.margin>
                <content>
-                  <VBox fx:id="vbox" prefHeight="386.0" prefWidth="384.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: transparent; -fx-background-radius: 0;" stylesheets="@../ImageDashBoard/MenuBarCustom.css" />
+                  <VBox fx:id="vbox" prefHeight="388.0" prefWidth="384.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: transparent; -fx-background-radius: 0;" stylesheets="@MenuBarCustom.css" />
                </content>
             </ScrollPane>
          </children></VBox>
@@ -250,7 +250,7 @@
                   </VBox>
                   <ImageView fx:id="userAvatar" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/avatar.jpg" />
+                        <Image url="@Image/avatar2.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" />
@@ -266,12 +266,12 @@
                   <Insets left="30.0" top="5.0" />
                </VBox.margin>
                <font>
-                  <Font name="Plus Jakarta Sans ExtraBold" size="20.0" />
+                  <Font name="Plus Jakarta Sans ExtraBold" size="24.0" />
                </font>
             </Label>
             <StackPane alignment="TOP_LEFT">
                <VBox.margin>
-                  <Insets left="5.0" top="25.0" />
+                  <Insets left="5.0" top="15.0" />
                </VBox.margin>
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#141522" height="161.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="240.0">
@@ -331,7 +331,7 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5484ff" height="198.0" layoutX="26.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="240.0" />
                   <Circle fill="#f5f5f53f" layoutX="48.0" layoutY="74.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#f5f5f53f" layoutX="230.0" layoutY="211.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                  <Button fx:id="contactButton" layoutX="46.0" layoutY="186.0" mnemonicParsing="false" onAction="#onContactButtonClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #5484ff; -fx-background-radius: 10; -fx-cursor: hand;" text="Contact me">
+                  <Button fx:id="contactButton" layoutX="46.0" layoutY="186.0" mnemonicParsing="false" onAction="#onContactButtonClick" prefHeight="50.0" prefWidth="200.0" styleClass="Button" stylesheets="@../ContactButtonCustom.css" text="Contact me">
                      <font>
                         <Font name="Plus Jakarta Sans SemiBold" size="16.0" />
                      </font>
@@ -339,7 +339,7 @@
                   <Circle fill="#5484ff" layoutX="146.0" layoutY="51.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
                   <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="131.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/question.png" />
+                        <Image url="@Image/question.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="88.0" layoutY="85.0" text="Help Center" textFill="WHITE">

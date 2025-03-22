@@ -15,7 +15,7 @@
       </Label>
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../ImageDashBoard/clone.png" />
+            <Image url="@../DashBoard/Image/clone.png" />
          </image>
       </ImageView>
       <Label layoutX="48.0" layoutY="52.0" style="-fx-text-fill: black;" text="In Progress">
@@ -25,7 +25,7 @@
       </Label>
       <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="171.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../ImageDashBoard/avatar.jpg" />
+            <Image url="@../DashBoard/Image/avatar.jpg" />
          </image>
       </ImageView>
    </children>

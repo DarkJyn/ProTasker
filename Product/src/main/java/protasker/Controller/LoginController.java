@@ -5,20 +5,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import protasker.Model.Authenticator;
-import protasker.Model.FileContact;
 import protasker.Model.User;
 
 import java.io.IOException;
-import java.util.List;
-
-
 public class LoginController{
 
     @FXML
@@ -35,11 +29,19 @@ public class LoginController{
 
     @FXML
     private TextField usernameTextField;
-    List<User> userList =  FileContact.loadUserFromJson();
+    @FXML
+    void initialize() {
+        assert PasswordTextField != null : "fx:id=\"PasswordTextField\" was not injected: check your FXML file 'login-screen.fxml'.";
+        assert logInButton != null : "fx:id=\"logInButton\" was not injected: check your FXML file 'login-screen.fxml'.";
+        assert loginNotiLabel != null : "fx:id=\"loginNotiLabel\" was not injected: check your FXML file 'login-screen.fxml'.";
+        assert signUpScreen != null : "fx:id=\"signUpScreen\" was not injected: check your FXML file 'login-screen.fxml'.";
+        assert usernameTextField != null : "fx:id=\"usernameTextField\" was not injected: check your FXML file 'login-screen.fxml'.";
+        logInButton.setTextFill(Color.WHITE);
+    }
     @FXML
     void onSignUpScreen(MouseEvent event) throws IOException {
         Stage stage = (Stage) signUpScreen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/signup-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/signup-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -47,7 +49,7 @@ public class LoginController{
         User user = Authenticator.checkLogin(usernameTextField.getText(), PasswordTextField.getText());
         if(user != null){
             Stage stage = (Stage) logInButton.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
             Parent root = loader.load();
             DashBoardController dashBoardController = loader.getController();
             dashBoardController.setCurrentUser(user);

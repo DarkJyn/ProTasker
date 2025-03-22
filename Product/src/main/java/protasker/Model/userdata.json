@@ -4,6 +4,43 @@
     "password": "a",
     "projects": [
       {
+        "name": "SeaBattle",
+        "priority": "Medium",
+        "description": "First Console Game made by Java\n",
+        "leader": {
+          "name": "a",
+          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+        },
+        "StartDate": "2024-12-09",
+        "TargetDate": "2025-02-08",
+        "tasks": [
+          {
+            "name": "Draw UML",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "Low"
+          },
+          {
+            "name": "Code Logic",
+            "description": "",
+            "status": "Done",
+            "projectOwn": "SeaBattle",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+            },
+            "priority": "High"
+          }
+        ],
+        "progress": "100%",
+        "searchValue": true
+      },
+      {
         "name": "ProTasker",
         "priority": "High",
         "description": "First App made by Java",
@@ -17,7 +54,7 @@
           {
             "name": "Draw UML",
             "description": "Draw Class Diagram and Activity Diagram",
-            "status": "Done",
+            "status": "In Progress",
             "projectOwn": "ProTasker",
             "userOwn": {
               "name": "a",
@@ -57,46 +94,34 @@
               "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
             },
             "priority": "High"
+          },
+          {
+            "name": "a",
+            "description": "a",
+            "status": "In Progress",
+            "projectOwn": "ProTasker",
+            "userOwn": {
+              "name": "a",
+              "imagePath": "C:\\Users\\ADMIN\\Downloads\\z6404420434409_693d624ec7200a0aacd0f4636e2df43e.jpg"
+            },
+            "priority": "Low"
           }
         ],
-        "progress": "50%",
+        "progress": "20%",
         "searchValue": true
       },
       {
-        "name": "SeaBattle",
+        "name": "C++_CODEPTIT repo",
         "priority": "Medium",
-        "description": "First Console Game made by Java\n",
+        "description": "Solve all C++ task\n",
         "leader": {
           "name": "a",
           "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
         },
-        "StartDate": "2024-12-09",
-        "TargetDate": "2025-02-08",
-        "tasks": [
-          {
-            "name": "Draw UML",
-            "description": "",
-            "status": "Done",
-            "projectOwn": "SeaBattle",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Code Logic",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "SeaBattle",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "High"
-          }
-        ],
-        "progress": "50%",
+        "StartDate": "2025-03-02",
+        "TargetDate": "2025-03-31",
+        "tasks": [],
+        "progress": "0%",
         "searchValue": true
       },
       {
@@ -144,25 +169,11 @@
             "priority": "Low"
           }
         ],
-        "progress": "0%",
-        "searchValue": true
-      },
-      {
-        "name": "C++_CODEPTIT repo",
-        "priority": "Medium",
-        "description": "Solve all C++ task\n",
-        "leader": {
-          "name": "a",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2025-03-02",
-        "TargetDate": "2025-03-31",
-        "tasks": [],
-        "progress": "0%",
+        "progress": "33%",
         "searchValue": true
       }
     ],
-    "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
+    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
   },
   {
     "username": "b",

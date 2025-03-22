@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import protasker.Model.Project;
@@ -17,7 +16,6 @@ import protasker.Model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class TaskScreenController {
     @FXML
@@ -55,7 +53,7 @@ public class TaskScreenController {
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
         Parent root = loader.load();
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
@@ -67,7 +65,7 @@ public class TaskScreenController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML
@@ -102,7 +100,7 @@ public class TaskScreenController {
         controller.setParentProject(projects);
         Stage stage = new Stage(); // Tạo cửa sổ mới
         stage.setTitle("New Task");
-        stage.setScene(new Scene(root, 665, 300)); // Đặt kích thước cửa sổ
+        stage.setScene(new Scene(root, 665, 250)); // Đặt kích thước cửa sổ
         stage.show();
     }
 

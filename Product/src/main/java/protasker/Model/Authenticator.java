@@ -30,7 +30,6 @@ public class Authenticator {
         }
         return false;
     }
-
     public static String registerUser(String username, String password, String confirmPassword) {
         if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
             return "Please fill in the information";

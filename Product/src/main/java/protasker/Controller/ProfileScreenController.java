@@ -34,7 +34,7 @@ public class ProfileScreenController {
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/dash-board.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
         Parent root = loader.load();
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
@@ -52,7 +52,7 @@ public class ProfileScreenController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
     @FXML

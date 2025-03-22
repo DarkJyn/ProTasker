@@ -15,13 +15,13 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProfileScreenController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
+      <VBox prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: white;">
          <children>
             <HBox alignment="BOTTOM_LEFT" prefHeight="66.0" prefWidth="200.0">
                <children>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageLoginScreen/logo.png" />
+                        <Image url="@ImageLoginScreen/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" />
@@ -37,11 +37,11 @@
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/overview.png" />
+                        <Image url="@DashBoard/Image/overview.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -60,11 +60,11 @@
                   <Insets left="20.0" right="20.0" top="70.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="hover-box" stylesheets="@CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/list-check.png" />
+                        <Image url="@DashBoard/Image/list-check.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -83,11 +83,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="hover-box" stylesheets="@CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/cube.png" />
+                        <Image url="@DashBoard/Image/cube.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -110,7 +110,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/user.png" />
+                        <Image url="@DashBoard/Image/user.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -129,11 +129,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="hover-box" stylesheets="@CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ImageDashBoard/sign-out-alt.png" />
+                        <Image url="@DashBoard/Image/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -178,7 +178,7 @@
                      <viewport>
                         <Rectangle2D />
                      </viewport></ImageView>
-                  <Button fx:id="uploadNewImageButton" mnemonicParsing="false" onAction="#onUploadNewImageButtonClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-cursor: hand;" text="Upload New Image">
+                  <Button fx:id="uploadNewImageButton" mnemonicParsing="false" onAction="#onUploadNewImageButtonClick" prefHeight="50.0" prefWidth="200.0" styleClass="custom-button" stylesheets="@TaskScreen/NewTaskButtonCustom.css" text="Upload New Image">
                      <font>
                         <Font name="Plus Jakarta Sans SemiBold" size="16.0" />
                      </font>
@@ -211,7 +211,7 @@
                         <Font name="Plus Jakarta Sans SemiBold" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="usernameTextField" prefHeight="40.0" prefWidth="300.0" promptText="Enter New Username">
+                  <TextField fx:id="usernameTextField" prefHeight="40.0" prefWidth="300.0" promptText="Enter New Username" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: text;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
                      <HBox.margin>
                         <Insets left="93.0" />
                      </HBox.margin>
@@ -228,7 +228,7 @@
                         <Font name="Plus Jakarta Sans SemiBold" size="24.0" />
                      </font>
                   </Label>
-                  <PasswordField fx:id="oldPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Type old Password">
+                  <PasswordField fx:id="oldPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Type old Password" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: text;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
                      <HBox.margin>
                         <Insets left="106.0" />
                      </HBox.margin>
@@ -248,7 +248,7 @@
                         <Font name="Plus Jakarta Sans SemiBold" size="24.0" />
                      </font>
                   </Label>
-                  <PasswordField fx:id="newPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Type new Password">
+                  <PasswordField fx:id="newPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Type new Password" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: text;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
                      <HBox.margin>
                         <Insets left="96.0" />
                      </HBox.margin>
@@ -261,7 +261,7 @@
                   <Insets left="50.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <Button fx:id="onConfirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-cursor: hand;" text="Confirm">
+            <Button fx:id="onConfirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="40.0" prefWidth="150.0" styleClass="custom-button" stylesheets="@TaskScreen/NewTaskButtonCustom.css" text="Confirm">
                <font>
                   <Font name="Plus Jakarta Sans SemiBold" size="18.0" />
                </font>

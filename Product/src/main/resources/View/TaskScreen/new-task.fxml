@@ -66,7 +66,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="650.0">
          <children>
-            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButton" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #3498db; -fx-background-radius: 10;" text="Confirm">
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButton" prefHeight="29.0" prefWidth="90.0" styleClass="custom-button" stylesheets="@NewTaskButtonCustom.css" text="Confirm">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
@@ -74,7 +74,7 @@
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" prefHeight="29.0" prefWidth="90.0" style="-fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #3498db; -fx-background-radius: 10;" text="Cancel">
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" prefHeight="29.0" prefWidth="90.0" styleClass="custom-button" stylesheets="@NewTaskButtonCustom.css" text="Cancel">
                <font>
                   <Font name="Plus Jakarta Sans Medium" size="14.0" />
                </font>

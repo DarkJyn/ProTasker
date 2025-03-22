@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.*;
@@ -79,7 +78,7 @@ public class DashBoardController {
     @FXML
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
         stage.setScene(new Scene(root, 900, 600));
     }
 
@@ -127,8 +126,8 @@ public class DashBoardController {
     void onPriorityLabelClick(MouseEvent event) throws IOException {
         searchProjects.sort(Comparator.comparingInt(Project::getPriorityAsInt));
         loadProjects();
-        allProjectLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
         priorityLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
+        allProjectLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
         progressLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
         targetDate.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
     }
@@ -138,8 +137,8 @@ public class DashBoardController {
         loadProjects();
         allProjectLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
         priorityLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
-        progressLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
         targetDate.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
+        progressLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
     }
     @FXML
     void onTargetDateClick(MouseEvent event) throws IOException {
@@ -184,11 +183,6 @@ public class DashBoardController {
     void setRunningTaskRightSide(String number) {
         runningTaskRightSide.setText(number);
     }
-//    @FXML
-//    private Label progressRightSide;
-//    void setProgressRightSide(String name) {
-//        progressRightSide.setText(name);
-//    }
     @FXML
     private Label totalTaskRightSide;
     void setTotalTaskRightSide(String name) {
@@ -208,5 +202,37 @@ public class DashBoardController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void onAllProjectLabelEnter(MouseEvent mouseEvent) {
+//        allProjectLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
+    }
+
+    public void onAllProjectLabelExit(MouseEvent mouseEvent) {
+//        allProjectLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
+    }
+
+    public void onPriorityLabelEnter(MouseEvent mouseEvent) {
+//        priorityLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
+    }
+
+    public void onPriorityLabelExit(MouseEvent mouseEvent) {
+//        priorityLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
+    }
+
+    public void onProgressLabelEnter(MouseEvent mouseEvent) {
+//        progressLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
+    }
+
+    public void onProgressLabelExit(MouseEvent mouseEvent) {
+//        progressLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
+    }
+
+    public void onTargetDateEnter(MouseEvent mouseEvent) {
+//        targetDate.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
+    }
+
+    public void onTargetDateExit(MouseEvent mouseEvent) {
+//        targetDate.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
     }
 }

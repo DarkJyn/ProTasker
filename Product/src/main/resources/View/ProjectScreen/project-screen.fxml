@@ -20,7 +20,7 @@
                <children>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageLoginScreen/logo.png" />
+                        <Image url="@../ImageLoginScreen/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" />
@@ -36,11 +36,11 @@
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/overview.png" />
+                        <Image url="@../DashBoard/Image/overview.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -59,11 +59,11 @@
                   <Insets left="20.0" right="20.0" top="70.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/list-check.png" />
+                        <Image url="@../DashBoard/Image/list-check.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -86,7 +86,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/cube.png" />
+                        <Image url="@../DashBoard/Image/cube.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -105,11 +105,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/user.png" />
+                        <Image url="@../DashBoard/Image/user.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -128,11 +128,11 @@
                   <Insets left="20.0" right="20.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="170.0" styleClass="hover-box" stylesheets="@../CustomLabelLeftSide.css">
                <children>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../ImageDashBoard/sign-out-alt.png" />
+                        <Image url="@../DashBoard/Image/sign-out-alt.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -165,7 +165,7 @@
                         <Insets left="30.0" right="15.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="onTargetDateButton" mnemonicParsing="false" onAction="#onTargetDateButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Target Date">
+                  <Button fx:id="onTargetDateButton" mnemonicParsing="false" onAction="#onTargetDateButtonClick" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="Target Date">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -175,12 +175,12 @@
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/calendar-check.png" />
+                              <Image url="@../DashBoard/Image/calendar-check.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="onProgressButton" mnemonicParsing="false" onAction="#onProgressButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Progress">
+                  <Button fx:id="onProgressButton" mnemonicParsing="false" onAction="#onProgressButtonClick" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="Progress">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -190,12 +190,12 @@
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/badge-percent.png" />
+                              <Image url="@../DashBoard/Image/badge-percent%20(1).png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="onPriorityButton" mnemonicParsing="false" onAction="#onPriorityButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="Priority">
+                  <Button fx:id="onPriorityButton" mnemonicParsing="false" onAction="#onPriorityButtonClick" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="Priority">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -205,7 +205,7 @@
                      <graphic>
                         <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/priority-arrows.png" />
+                              <Image url="@../DashBoard/Image/priority-arrows%20(1).png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -215,14 +215,14 @@
                         <Insets left="30.0" />
                      </HBox.margin>
                   </Line>
-                  <Button fx:id="newProjectButton" mnemonicParsing="false" onAction="#onNewProjectButtonClick" style="-fx-background-color: transparent; -fx-border-color: #EBE8DB; -fx-border-radius: 10; -fx-cursor: hand;" text="New Project">
+                  <Button fx:id="newProjectButton" mnemonicParsing="false" onAction="#onNewProjectButtonClick" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="New Project">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ImageDashBoard/plus.png" />
+                              <Image url="@../DashBoard/Image/plus.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -285,7 +285,7 @@
                   <Insets bottom="15.0" left="10.0" />
                </VBox.margin>
                <content>
-                  <VBox fx:id="vbox" prefHeight="691.0" prefWidth="666.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@../../ImageDashBoard/MenuBarCustom.css">
+                  <VBox fx:id="vbox" prefHeight="496.0" prefWidth="666.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: transparent; -fx-background-radius: 10;" stylesheets="@../DashBoard/MenuBarCustom.css">
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="665.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                            <children>
@@ -307,7 +307,7 @@
                               </Label>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../ImageDashBoard/avatar.jpg" />
+                                    <Image url="@../DashBoard/Image/avatar.jpg" />
                                  </image>
                                  <HBox.margin>
                                     <Insets />
@@ -338,7 +338,7 @@
                   </VBox>
                </content>
                <stylesheets>
-                  <URL value="@../../ImageDashBoard/MenuBarCustom.css" />
+                  <URL value="@../DashBoard/MenuBarCustom.css" />
                   <URL value="@../ScrollPaneCustom.css" />
                </stylesheets>
             </ScrollPane>

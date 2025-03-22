@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import protasker.Model.Authenticator;
 
@@ -35,8 +36,15 @@ public class SignUpController{
         signUpNotiLabel.setText(result);
         if(result.equals("Successfully registered!")){
             Stage stage = (Stage) signUpButton.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/View/login-screen.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
             stage.setScene(new Scene(root, 900, 600));
         }
+    }
+    @FXML
+    private Label logInScreen;
+    public void onLogInScreen(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) logInScreen.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
+        stage.setScene(new Scene(root, 900, 600));
     }
 }

@@ -1,0 +1,9 @@
+.input{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+.input:hover{
+    -fx-background-color: #F7F7F7;
+    -fx-cursor: hand;
+}

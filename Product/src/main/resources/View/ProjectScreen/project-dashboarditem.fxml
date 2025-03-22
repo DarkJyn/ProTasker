@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="vbox" onMouseClicked="#onVboxClick" prefHeight="120.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-cursor: hand;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectItemController">
+<VBox fx:id="vbox" onMouseClicked="#onVboxClick" prefHeight="120.0" prefWidth="380.0" styleClass="input" stylesheets="@ProjectItemCustom.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectItemController">
    <children>
       <HBox prefHeight="76.0" prefWidth="389.0">
          <children>
@@ -34,7 +34,7 @@
             </VBox>
             <ImageView fx:id="projectLeaderAvtPath" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../ImageDashBoard/avatar.jpg" />
+                  <Image url="@../DashBoard/Image/avatar.jpg" />
                </image>
                <HBox.margin>
                   <Insets top="10.0" />
@@ -46,7 +46,7 @@
          <children>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../ImageDashBoard/priority-arrows.png" />
+                  <Image url="@../DashBoard/Image/priority-arrows.png" />
                </image>
                <HBox.margin>
                   <Insets left="25.0" />
@@ -65,7 +65,7 @@
             </Label>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../ImageDashBoard/calendar-check.png" />
+                  <Image url="@../DashBoard/Image/calendar-check.png" />
                </image>
                <HBox.margin>
                   <Insets left="70.0" />
