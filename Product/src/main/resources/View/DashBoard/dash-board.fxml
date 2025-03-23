@@ -190,7 +190,7 @@
                   <Insets left="25.0" right="17.0" top="15.0" />
                </VBox.margin>
                <children>
-                  <Label fx:id="allProjectLabel" onMouseClicked="#onAllProjectLabelClick" onMouseEntered="#onAllProjectLabelEnter" onMouseExited="#onAllProjectLabelExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="All Projects">
+                  <Label fx:id="allProjectLabel" onMouseClicked="#onAllProjectLabelClick" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="All Projects">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
@@ -198,17 +198,17 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="priorityLabel" onMouseClicked="#onPriorityLabelClick" onMouseEntered="#onPriorityLabelEnter" onMouseExited="#onPriorityLabelExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Priority">
+                  <Label fx:id="priorityLabel" onMouseClicked="#onPriorityLabelClick" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Priority">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="progressLabel" onMouseClicked="#onProgressLabelClick" onMouseEntered="#onProgressLabelEnter" onMouseExited="#onProgressLabelExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Progress">
+                  <Label fx:id="progressLabel" onMouseClicked="#onProgressLabelClick" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Progress">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="targetDate" onMouseClicked="#onTargetDateClick" onMouseEntered="#onTargetDateEnter" onMouseExited="#onTargetDateExit" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Target Date">
+                  <Label fx:id="targetDate" onMouseClicked="#onTargetDateClick" style="-fx-cursor: hand;" styleClass="text" stylesheets="@ItemLabelCustom.css" text="Target Date">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="13.0" />
                      </font>

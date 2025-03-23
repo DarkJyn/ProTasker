@@ -203,36 +203,4 @@ public class DashBoardController {
             e.printStackTrace();
         }
     }
-
-    public void onAllProjectLabelEnter(MouseEvent mouseEvent) {
-//        allProjectLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
-    }
-
-    public void onAllProjectLabelExit(MouseEvent mouseEvent) {
-//        allProjectLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
-    }
-
-    public void onPriorityLabelEnter(MouseEvent mouseEvent) {
-//        priorityLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
-    }
-
-    public void onPriorityLabelExit(MouseEvent mouseEvent) {
-//        priorityLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
-    }
-
-    public void onProgressLabelEnter(MouseEvent mouseEvent) {
-//        progressLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
-    }
-
-    public void onProgressLabelExit(MouseEvent mouseEvent) {
-//        progressLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
-    }
-
-    public void onTargetDateEnter(MouseEvent mouseEvent) {
-//        targetDate.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand;");
-    }
-
-    public void onTargetDateExit(MouseEvent mouseEvent) {
-//        targetDate.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
-    }
 }
