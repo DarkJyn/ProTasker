@@ -110,7 +110,7 @@ public class ProfileScreenController {
     @FXML
     private TextField usernameTextField;
     @FXML
-    void onConfirmButtonClick(ActionEvent event) {
+    void onConfirmButtonClick(ActionEvent event) throws IOException {
         List<User> usersList = FileContact.loadUserFromJson();
         for (User user : usersList){
             if (user.getUsername().equals(currentUser.getUsername())){
@@ -131,5 +131,8 @@ public class ProfileScreenController {
         newPasswordField.clear();
         oldPasswordField.clear();
         usernameTextField.clear();
+        Stage stage = (Stage) logOut.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
+        stage.setScene(new Scene(root, 900, 600));
     }
 }
