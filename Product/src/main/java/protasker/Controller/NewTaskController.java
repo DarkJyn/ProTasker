@@ -12,6 +12,7 @@ import protasker.Model.FileContact;
 import protasker.Model.Project;
 import protasker.Model.Task;
 import protasker.Model.User;
+import protasker.Model.DataStore;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,6 +30,9 @@ public class NewTaskController {
 
     @FXML
     private ComboBox<Project> parentProject;
+
+    @FXML
+    private ComboBox<User> assigneeComboBox;
 
     @FXML
     private ComboBox<String> statusOfTask;
@@ -75,6 +79,47 @@ public class NewTaskController {
                 setText((project == null || empty) ? null : project.getName());
             }
         });
+
+        // Thêm listener để load members khi chọn project
+        parentProject.valueProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                try {
+                    loadProjectMembers(newVal);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    private void loadProjectMembers(Project project) throws IOException {
+        DataStore dataStore = FileContact.loadDataStore();
+        List<User> members = dataStore.getProjectMembers(project.getProjectId());
+        ObservableList<User> observableList = FXCollections.observableArrayList(members);
+        assigneeComboBox.setItems(observableList);
+
+        // Custom cell factory để hiển thị username
+        assigneeComboBox.setCellFactory(new Callback<ListView<User>, ListCell<User>>() {
+            @Override
+            public ListCell<User> call(ListView<User> param) {
+                return new ListCell<>() {
+                    @Override
+                    protected void updateItem(User user, boolean empty) {
+                        super.updateItem(user, empty);
+                        setText((user == null || empty) ? null : user.getUsername());
+                    }
+                };
+            }
+        });
+
+        // Custom button cell
+        assigneeComboBox.setButtonCell(new ListCell<>() {
+            @Override
+            protected void updateItem(User user, boolean empty) {
+                super.updateItem(user, empty);
+                setText((user == null || empty) ? null : user.getUsername());
+            }
+        });
     }
     public void setProjectDetailScreenController(ProjectDetailController controller) {
         this.projectDetailController = controller;
@@ -88,21 +133,30 @@ public class NewTaskController {
 
     @FXML
     void onConfirmButton(ActionEvent event) throws IOException {
-        User user = currentUser;
         String taskName = taskTitle.getText();
         String description = taskDescription.getText();
         String priority = taskPriority.getValue();
         String status  = statusOfTask.getValue();
         Project project = parentProject.getSelectionModel().getSelectedItem();
-        if (taskName.isEmpty() || priority == null || status == null) {
+        User assignee = assigneeComboBox.getValue();
+        
+        if (taskName.isEmpty() || priority == null || status == null || project == null) {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
-        Task task = new Task(taskName,description, status, project.getName(), user.toUserInfo(),priority);
-        if(parentProject.getSelectionModel().getSelectedItem() != null) project.getTasks().add(task);
-        FileContact.saveUsersToJson(currentUser);
-        if(taskScreenController != null) taskScreenController.loadTasks();
-        if(projectDetailController != null) projectDetailController.loadAllTasks();
+        
+        if (assignee == null) {
+            showAlert("Error", "Please select an assignee", Alert.AlertType.ERROR);
+            return;
+        }
+        
+        DataStore dataStore = FileContact.loadDataStore();
+        Task task = new Task(taskName, description, status, project.getProjectId(), assignee.getUserId(), priority);
+        dataStore.getTasks().add(task);
+        FileContact.saveDataStore(dataStore);
+        
+        if(taskScreenController != null) taskScreenController.refreshTasks();
+        if(projectDetailController != null) projectDetailController.refreshAllTasks();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
     }

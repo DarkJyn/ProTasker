@@ -16,26 +16,36 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.LoginController">
    <right>
-      <VBox prefHeight="600.0" prefWidth="431.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="750.0" prefWidth="502.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_RIGHT" prefHeight="86.0" prefWidth="478.0">
+            <HBox alignment="TOP_RIGHT" prefHeight="71.0" prefWidth="502.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="502.0">
                <children>
                   <ImageView fitHeight="44.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../ImageLoginScreen/logo.png" />
                      </image>
                      <HBox.margin>
-                        <Insets right="10.0" top="10.0" />
+                        <Insets left="50.0" right="10.0" />
                      </HBox.margin>
                   </ImageView>
+                  <Label prefHeight="46.0" prefWidth="119.0" text="PROTASKER" textFill="#151515">
+                     <font>
+                        <Font name="Evogria" size="18.0" />
+                     </font>
+                  </Label>
                </children>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </HBox>
-            <Label alignment="BOTTOM_LEFT" prefHeight="69.0" prefWidth="318.0" text="Sign in">
+            <Label alignment="BOTTOM_LEFT" prefHeight="69.0" prefWidth="318.0" text="Log in">
                <font>
                   <Font name="Poppins Medium" size="36.0" />
                </font>
@@ -157,24 +167,14 @@
       </VBox>
    </right>
    <center>
-      <AnchorPane prefHeight="600.0" prefWidth="466.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="750.0" prefWidth="637.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000842" height="578.0" layoutX="11.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="447.0" />
-            <ImageView fitHeight="399.0" fitWidth="386.0" layoutX="47.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000842" height="729.0" layoutX="11.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="573.0" />
+            <ImageView fitHeight="531.0" fitWidth="532.0" layoutX="46.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../ImageLoginScreen/Saly-10.png" />
                </image>
             </ImageView>
-            <Label layoutX="144.0" layoutY="427.0" text="Sign in to name" textFill="WHITE">
-               <font>
-                  <Font name="Plus Jakarta Sans SemiBold" size="36.0" />
-               </font>
-            </Label>
-            <Label layoutX="24.0" layoutY="12.0" prefHeight="46.0" prefWidth="119.0" text="PROTASKER" textFill="WHITE">
-               <font>
-                  <Font name="Evogria" size="18.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
    </center>

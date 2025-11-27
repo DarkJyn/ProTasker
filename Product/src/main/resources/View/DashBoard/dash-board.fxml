@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.DashBoardController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.DashBoardController">
    <children>
       <VBox prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: white;">
          <children>
@@ -152,20 +152,20 @@
                   </Label>
                </children>
                <VBox.margin>
-                  <Insets left="20.0" right="20.0" top="200.0" />
+                  <Insets left="20.0" right="20.0" top="250.0" />
                </VBox.margin>
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="middleVbox" prefHeight="600.0" prefWidth="409.0" style="-fx-background-color: #faf9f9;">
+      <VBox fx:id="middleVbox" prefHeight="750.0" prefWidth="602.0" style="-fx-background-color: #faf9f9;">
          <children>
             <AnchorPane prefHeight="119.0" prefWidth="410.0">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4a90e073" height="50.0" layoutX="25.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 10; -fx-stroke: transparent; -fx-arc-height: 25; -fx-arc-width: 25;" width="360.0" />
-                  <TextField fx:id="searchField" layoutX="68.0" layoutY="22.0" onAction="#handleEnterKey" onMouseClicked="#onSearchClick" prefHeight="42.0" prefWidth="316.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-cursor: text;" stylesheets="@SearchboxCustom.css">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4a90e073" height="50.0" layoutX="25.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 10; -fx-stroke: transparent; -fx-arc-height: 25; -fx-arc-width: 25;" width="557.0" />
+                  <TextField fx:id="searchField" layoutX="68.0" layoutY="22.0" onAction="#handleEnterKey" onMouseClicked="#onSearchClick" prefHeight="42.0" prefWidth="500.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-cursor: text;" stylesheets="@SearchboxCustom.css">
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
@@ -220,7 +220,7 @@
                   <Insets bottom="15.0" left="10.0" top="5.0" />
                </VBox.margin>
                <content>
-                  <VBox fx:id="vbox" prefHeight="388.0" prefWidth="384.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: transparent; -fx-background-radius: 0;" stylesheets="@MenuBarCustom.css" />
+                  <VBox fx:id="vbox" prefHeight="498.0" prefWidth="565.0" spacing="10.0" style="-fx-background-color: #faf9f9; -fx-border-color: transparent; -fx-background-radius: 0;" stylesheets="@MenuBarCustom.css" />
                </content>
             </ScrollPane>
          </children></VBox>
@@ -263,7 +263,7 @@
             </HBox>
             <Label fx:id="projectNameRightSide" prefHeight="30.0" prefWidth="242.0" text="Project's Detail">
                <VBox.margin>
-                  <Insets left="30.0" top="5.0" />
+                  <Insets left="30.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font name="Plus Jakarta Sans ExtraBold" size="24.0" />
@@ -358,6 +358,9 @@
                      </font>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
             </AnchorPane>
          </children></VBox>
    </children>

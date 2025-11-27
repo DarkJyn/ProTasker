@@ -6,10 +6,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import protasker.Model.FileContact;
+import protasker.Model.DataStore;
 import protasker.Model.Project;
 import protasker.Model.Task;
 import protasker.Model.User;
+import protasker.Model.FileContact;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +23,9 @@ public class TaskController {
 
     @FXML
     private Label taskProjectNameOwn;
+
+    @FXML
+    private Label taskAssigneeName;
 
     @FXML
     private Label taskName;
@@ -46,15 +50,45 @@ public class TaskController {
         taskName.setText(task.getName());
         taskDecrip.setText(task.getDescription());
         taskStatus.setPromptText(task.getStatus());
-        File file = new File(userOwn.getUserAvatarPath());
-        Image image = new Image(file.toURI().toString());
-        userAvaPath.setImage(image);
-//        userAvaPath.setImage(new Image(getClass().getResourceAsStream(task.getUserOwn().getUserAvatarPath())));
-        taskProjectNameOwn.setText(task.getProjectOwn());
+        
+        DataStore dataStore = FileContact.loadDataStore();
+        User assignedUser = dataStore.getUsers().stream()
+            .filter(u -> u.getUserId().equals(task.getAssignedUserId()))
+            .findFirst().orElse(null);
+        
+        if(assignedUser != null) {
+            // Hiển thị tên assignee
+            taskAssigneeName.setText(assignedUser.getUsername());
+            
+            // Hiển thị avatar
+            if(assignedUser.getUserAvatarPath() != null && !assignedUser.getUserAvatarPath().isEmpty()) {
+                try {
+                    File file = new File(assignedUser.getUserAvatarPath());
+                    Image image = new Image(file.toURI().toString());
+                    userAvaPath.setImage(image);
+                } catch (Exception e) {
+                    // Nếu load avatar lỗi, dùng default
+                    Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                    userAvaPath.setImage(defaultImage);
+                }
+            } else {
+                // Dùng default avatar
+                Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                userAvaPath.setImage(defaultImage);
+            }
+        }
+        
+        Project project = dataStore.getProjects().stream()
+            .filter(p -> p.getProjectId().equals(task.getProjectId()))
+            .findFirst().orElse(null);
+        if(project != null) {
+            taskProjectNameOwn.setText(project.getName());
+        }
+        
         taskStatus.valueProperty().addListener((obs, oldValue, newValue) -> {
-            task.setStatus(newValue); // Cập nhật status trong Task
-            taskStatus.setPromptText(newValue); // Hiển thị trạng thái mới
-            FileContact.saveUsersToJson(userOwn);
+            task.setStatus(newValue);
+            taskStatus.setPromptText(newValue);
+            FileContact.updateTask(dataStore, task);
             if(taskScreenController != null){
                 try {
                     taskScreenController.loadTasks();

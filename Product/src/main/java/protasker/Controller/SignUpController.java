@@ -37,7 +37,7 @@ public class SignUpController{
         if(result.equals("Successfully registered!")){
             Stage stage = (Stage) signUpButton.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
-            stage.setScene(new Scene(root, 900, 600));
+            stage.setScene(new Scene(root, 1100, 750));
         }
     }
     @FXML

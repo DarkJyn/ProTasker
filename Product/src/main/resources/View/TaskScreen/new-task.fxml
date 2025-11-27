@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="250.0" prefWidth="650.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.NewTaskController">
+<VBox prefHeight="250.0" prefWidth="650.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.NewTaskController">
    <children>
       <TextField fx:id="taskTitle" prefHeight="40.0" prefWidth="666.0" promptText="Task Title" style="-fx-background-color: transparent;">
          <VBox.margin>
@@ -58,7 +58,11 @@
                   </FXCollections>
                </items>
             </ComboBox>
-            <ComboBox fx:id="parentProject" prefHeight="26.0" prefWidth="110.0" promptText="Project" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
+            <ComboBox fx:id="parentProject" prefHeight="29.0" prefWidth="174.0" promptText="Project" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <ComboBox fx:id="assigneeComboBox" prefHeight="29.0" prefWidth="174.0" promptText="Assign to" style="-fx-cursor: hand;" stylesheets="@../ComboBoxCustom.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></ComboBox>

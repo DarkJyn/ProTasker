@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectDetailController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProjectDetailController">
    <children>
       <VBox prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: white;">
          <children>
@@ -156,7 +156,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox prefHeight="600.0" prefWidth="691.0" style="-fx-background-color: #faf9f9;">
+      <VBox prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: #faf9f9;">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="345.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
                <children>
@@ -205,6 +205,21 @@
                         <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../DashBoard/Image/plus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="manageMembersButton" mnemonicParsing="false" onAction="#onManageMembersButtonClick" styleClass="custom-button" stylesheets="@../TaskScreen/NewTaskButtonCustom.css" text="Members">
+                     <font>
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../DashBoard/Image/user_white.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -290,12 +305,12 @@
                   </Label>
                </children>
             </HBox>
-            <ScrollPane prefHeight="452.0" prefWidth="681.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9;" stylesheets="@../DashBoard/MenuBarCustom.css">
+            <ScrollPane prefHeight="600.0" prefWidth="681.0" style="-fx-background-color: #faf9f9; -fx-border-color: #faf9f9;" stylesheets="@../DashBoard/MenuBarCustom.css">
                <VBox.margin>
                   <Insets bottom="15.0" left="10.0" />
                </VBox.margin>
                <content>
-                  <VBox fx:id="vbox" prefHeight="600.0" prefWidth="667.0" spacing="10.0" style="-fx-background-color: #faf9f9;" />
+                  <VBox fx:id="vbox" prefHeight="590.0" prefWidth="866.0" spacing="10.0" style="-fx-background-color: #faf9f9;" />
                </content>
             </ScrollPane>
          </children>

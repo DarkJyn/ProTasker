@@ -10,14 +10,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import protasker.Model.DataStore;
 import protasker.Model.Project;
 import protasker.Model.Task;
 import protasker.Model.User;
+import protasker.Model.FileContact;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class ProjectItemController {
 
@@ -51,9 +54,27 @@ public class ProjectItemController {
         projectPriority.setText(project.getPriority());
         projectDesrips.setText(project.getDescription());
         projectTargetDate.setText(formatDate(project.getTargetDate()));
-        File file = new File(leader.getUserAvatarPath());
-        Image image = new Image(file.toURI().toString());
-        projectLeaderAvtPath.setImage(image);
+        
+        DataStore dataStore = FileContact.loadDataStore();
+        User projectLeader = dataStore.getUsers().stream()
+            .filter(u -> u.getUserId().equals(project.getLeaderId()))
+            .findFirst().orElse(null);
+        
+        if(projectLeader != null) {
+            if(projectLeader.getUserAvatarPath() != null && !projectLeader.getUserAvatarPath().isEmpty()) {
+                try {
+                    File file = new File(projectLeader.getUserAvatarPath());
+                    Image image = new Image(file.toURI().toString());
+                    projectLeaderAvtPath.setImage(image);
+                } catch (Exception e) {
+                    Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                    projectLeaderAvtPath.setImage(defaultImage);
+                }
+            } else {
+                Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                projectLeaderAvtPath.setImage(defaultImage);
+            }
+        }
     }
 
     public static String formatDate(String inputDate) {
@@ -71,16 +92,18 @@ public class ProjectItemController {
     @FXML
     public void onVboxClick(MouseEvent mouseEvent) throws IOException {
         dashBoardController.setProjectNameRightSide(project.getName());
+        DataStore dataStore = FileContact.loadDataStore();
+        List<Task> projectTasks = dataStore.getProjectTasks(project.getProjectId());
+        
         runningTask = 0;
-        for(Task task : project.getTasks()) {
+        for(Task task : projectTasks) {
             if(task.getStatus().equals("In Progress")) {
                 runningTask++;
             }
         }
         dashBoardController.setRunningTaskRightSide(runningTask +"");
-        dashBoardController.setTotalTaskRightSide(project.getTasks().size()+"");
-//        dashBoardController.setProgressRightSide(project.getProgress());
-        int value = Integer.parseInt(project.getProgress().replace("%", ""));
-        dashBoardController.updateProgress(value);
+        dashBoardController.setTotalTaskRightSide(projectTasks.size()+"");
+        int progress = project.getProgressAsInt((java.util.ArrayList<Task>)projectTasks);
+        dashBoardController.updateProgress(progress);
     }
 }

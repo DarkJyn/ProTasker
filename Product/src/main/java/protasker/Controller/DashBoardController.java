@@ -24,6 +24,7 @@ import java.util.List;
 
 public class DashBoardController {
     private User currentUser;
+    private DataStore dataStore;
     @FXML
     private Label usernameLabel;
     @FXML
@@ -31,11 +32,24 @@ public class DashBoardController {
     List<Project> searchProjects = new ArrayList<>();
     public void setCurrentUser(User currentUser) throws IOException {
         this.currentUser = currentUser;
-        searchProjects = currentUser.getProjects();
+        this.dataStore = FileContact.loadDataStore();
+        searchProjects = dataStore.getUserProjects(currentUser.getUserId());
         usernameLabel.setText("Hi, " + currentUser.getUsername());
-        File file = new File(currentUser.getUserAvatarPath());
-        Image image = new Image(file.toURI().toString());
-        userAvatar.setImage(image);
+        
+        // Load avatar
+        if(currentUser.getUserAvatarPath() != null && !currentUser.getUserAvatarPath().isEmpty()) {
+            try {
+                File file = new File(currentUser.getUserAvatarPath());
+                Image image = new Image(file.toURI().toString());
+                userAvatar.setImage(image);
+            } catch (Exception e) {
+                Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                userAvatar.setImage(defaultImage);
+            }
+        } else {
+            Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+            userAvatar.setImage(defaultImage);
+        }
         loadProjects();
         searchField.setEditable(false);
         allProjectLabel.setStyle("-fx-text-fill: #3498db;-fx-cursor: hand");
@@ -70,7 +84,7 @@ public class DashBoardController {
         TaskScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) taskLabelInDashBoard.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 
     @FXML
@@ -79,7 +93,7 @@ public class DashBoardController {
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 
     @FXML
@@ -91,7 +105,7 @@ public class DashBoardController {
         ProfileScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) profileLabelInDashBoard.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 
     @FXML
@@ -103,7 +117,7 @@ public class DashBoardController {
         ProjectScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) projectLabelInDashBoard.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     private Label allProjectLabel;
@@ -133,7 +147,7 @@ public class DashBoardController {
     }
     @FXML
     void onProgressLabelClick(MouseEvent event) throws IOException {
-        searchProjects.sort(Comparator.comparingInt(Project::getProgressAsInt));
+        searchProjects.sort(Comparator.comparingInt(p -> p.getProgressAsInt((ArrayList<Task>)dataStore.getProjectTasks(p.getProjectId()))));
         loadProjects();
         allProjectLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
         priorityLabel.setStyle("-fx-text-fill: black;-fx-cursor: hand;");
