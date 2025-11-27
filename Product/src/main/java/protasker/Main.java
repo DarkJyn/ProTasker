@@ -11,13 +11,12 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/View/LogInAndSignUp/login-screen.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 1100, 750);
         stage.setTitle("PROTASKER");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/View/ImageLoginScreen/logo.png")));
         stage.setScene(scene);
         stage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }

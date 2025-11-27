@@ -42,7 +42,7 @@ public class LoginController{
     void onSignUpScreen(MouseEvent event) throws IOException {
         Stage stage = (Stage) signUpScreen.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/signup-screen.fxml"));
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     void onLogInButtonClick(ActionEvent event) throws IOException {
@@ -53,7 +53,7 @@ public class LoginController{
             Parent root = loader.load();
             DashBoardController dashBoardController = loader.getController();
             dashBoardController.setCurrentUser(user);
-            stage.setScene(new Scene(root, 900, 600));
+            stage.setScene(new Scene(root, 1100, 750));
         }
         else{
             loginNotiLabel.setText("Invalid Username or Password");

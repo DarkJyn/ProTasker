@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import protasker.Model.FileContact;
 import protasker.Model.Project;
 import protasker.Model.User;
+import protasker.Model.DataStore;
 
 import java.io.IOException;
 import java.net.Authenticator;
@@ -64,16 +65,26 @@ public class NewProjectController {
             showAlert("Error", "Please fill in the information", Alert.AlertType.ERROR);
             return;
         }
-        for(Project project : currentUser.getProjects()) {
+        
+        // Kiểm tra Target Date không được trước Start Date
+        if (targerDateOfProject.getValue().isBefore(startDateOfProject.getValue())) {
+            showAlert("Error", "Target Date cannot be before Start Date", Alert.AlertType.ERROR);
+            return;
+        }
+        
+        DataStore dataStore = FileContact.loadDataStore();
+        for(Project project : dataStore.getUserProjects(currentUser.getUserId())) {
             if (project.getName().equals(projectName)) {
                 showAlert("Error", "Project's Name used", Alert.AlertType.ERROR);
                 return;
             }
         }
-        Project newProject = new Project(projectName, priority, description, currentUser.toUserInfo(), startDate, targetDate);
-        currentUser.getProjects().add(newProject);
-        FileContact.saveUsersToJson(currentUser);
-        projectScreenController.loadProjects();
+        
+        Project newProject = new Project(projectName, priority, description, currentUser.getUserId(), startDate, targetDate);
+        dataStore.getProjects().add(newProject);
+        dataStore.addUserToProject(currentUser.getUserId(), newProject.getProjectId(), "owner");
+        FileContact.saveDataStore(dataStore);
+        projectScreenController.refreshProjects();
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
     }

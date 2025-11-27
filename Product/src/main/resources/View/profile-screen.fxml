@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProfileScreenController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protasker.Controller.ProfileScreenController">
    <children>
       <VBox prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: white;">
          <children>
@@ -149,126 +149,218 @@
                   </Label>
                </children>
                <VBox.margin>
-                  <Insets left="20.0" right="20.0" top="200.0" />
+                  <Insets left="20.0" right="20.0" top="250.0" />
                </VBox.margin>
             </HBox>
          </children>
       </VBox>
-      <VBox prefHeight="600.0" prefWidth="691.0">
+      <VBox prefHeight="750.0" prefWidth="890.0">
          <children>
-            <Label fx:id="titleName" text="User Profile">
+            <Label text="My Profile">
                <font>
-                  <Font name="Plus Jakarta Sans ExtraBold" size="36.0" />
+                  <Font name="Plus Jakarta Sans ExtraBold" size="28.0" />
                </font>
                <VBox.margin>
                   <Insets left="50.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Line endX="105.0" endY="-1.6576536893844604" startX="-100.0" startY="-1.6569277048110962" stroke="#3a6586">
+            <Line endX="30.0" startX="-100.0" stroke="#3a6586" strokeWidth="2.0">
                <VBox.margin>
                   <Insets left="50.0" />
                </VBox.margin>
             </Line>
-            <HBox alignment="CENTER_LEFT">
+            <!-- My Profile Section -->
+            <VBox prefHeight="180.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
                <VBox.margin>
-                  <Insets left="50.0" top="20.0" />
+                  <Insets left="50.0" right="50.0" top="20.0" />
                </VBox.margin>
                <children>
-                  <ImageView fx:id="avatarUser" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport></ImageView>
-                  <Button fx:id="uploadNewImageButton" mnemonicParsing="false" onAction="#onUploadNewImageButtonClick" prefHeight="50.0" prefWidth="200.0" styleClass="custom-button" stylesheets="@TaskScreen/NewTaskButtonCustom.css" text="Upload New Image">
-                     <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="16.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="160.0" />
-                     </HBox.margin>
-                  </Button>
+                  
+                  <HBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="750.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fx:id="avatarUser" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <VBox prefHeight="148.0" prefWidth="334.0">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label fx:id="userNameLabel" text="Username">
+                                 <font>
+                                    <Font name="Plus Jakarta Sans Bold" size="26.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="400.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@DashBoard/Image/badge-percent.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Task Completed:">
+                                       <font>
+                                          <Font name="Plus Jakarta Sans Medium" size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="taskCompletedLabel" text="0%">
+                                       <font>
+                                          <Font name="Plus Jakarta Sans Bold" size="17.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="uploadNewImageButton" mnemonicParsing="false" onAction="#onUploadNewImageButtonClick" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10; -fx-cursor: hand; -fx-text-fill: white;" text="Edit Avatar">
+                           <font>
+                              <Font name="Plus Jakarta Sans SemiBold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
-            <Label fx:id="titleName1" text="Change Information">
+            </VBox>
+            <Label fx:id="titleName1" text="Account Settings">
                <font>
-                  <Font name="Plus Jakarta Sans ExtraBold" size="36.0" />
+                  <Font name="Plus Jakarta Sans ExtraBold" size="28.0" />
                </font>
                <VBox.margin>
-                  <Insets left="50.0" top="10.0" />
+                  <Insets left="50.0" top="30.0" />
                </VBox.margin>
             </Label>
-            <Line endX="255.0" endY="-1.6576536893844604" startX="-100.0" startY="-1.6569277048110962" stroke="#3a6586">
+            <Line endX="150.0" endY="-1.6576536893844604" startX="-100.0" startY="-1.6569277048110962" stroke="#3a6586" strokeWidth="2.0">
                <VBox.margin>
                   <Insets left="50.0" />
                </VBox.margin>
             </Line>
-            <HBox alignment="CENTER_LEFT">
+            
+            <!-- Username Section -->
+            <VBox prefHeight="100.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
                <VBox.margin>
-                  <Insets left="50.0" top="20.0" />
+                  <Insets left="50.0" right="50.0" top="25.0" />
                </VBox.margin>
                <children>
-                  <Label text="New Username">
-                     <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="24.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="usernameTextField" prefHeight="40.0" prefWidth="300.0" promptText="Enter New Username" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: text;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
-                     <HBox.margin>
-                        <Insets left="93.0" />
-                     </HBox.margin>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashBoard/Image/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Username">
+                           <font>
+                              <Font name="Plus Jakarta Sans SemiBold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TextField fx:id="usernameTextField" prefHeight="45.0" prefWidth="750.0" promptText="Enter new username" style="-fx-border-color: #E8F0FE; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-color: #F8FAFB; -fx-background-radius: 8; -fx-font-size: 14px; -fx-padding: 10;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                   </TextField>
                </children>
-            </HBox>
-            <HBox alignment="CENTER_LEFT">
+            </VBox>
+            
+            <!-- Password Section -->
+            <VBox prefHeight="190.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="20.0" />
+               </VBox.margin>
                <children>
-                  <Label text="Old Password">
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ImageLoginScreen/lock.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Change Password">
+                           <font>
+                              <Font name="Plus Jakarta Sans SemiBold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  
+                  <PasswordField fx:id="oldPasswordField" prefHeight="45.0" prefWidth="750.0" promptText="Current password" style="-fx-border-color: #E8F0FE; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-color: #F8FAFB; -fx-background-radius: 8; -fx-font-size: 14px; -fx-padding: 10;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
                      <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="24.0" />
+                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
-                  </Label>
-                  <PasswordField fx:id="oldPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Type old Password" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: text;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
-                     <HBox.margin>
-                        <Insets left="106.0" />
-                     </HBox.margin>
+                  </PasswordField>
+                  
+                  <PasswordField fx:id="newPasswordField" prefHeight="45.0" prefWidth="750.0" promptText="New password" style="-fx-border-color: #E8F0FE; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-color: #F8FAFB; -fx-background-radius: 8; -fx-font-size: 14px; -fx-padding: 10;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
                      <font>
                         <Font name="Plus Jakarta Sans Medium" size="14.0" />
                      </font>
                   </PasswordField>
                </children>
+            </VBox>
+            
+            <!-- Save Button -->
+            <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="790.0">
                <VBox.margin>
-                  <Insets left="50.0" top="20.0" />
+                  <Insets left="50.0" right="50.0" top="20.0" />
                </VBox.margin>
-            </HBox>
-            <HBox alignment="CENTER_LEFT">
                <children>
-                  <Label text="New Password">
+                  <Button fx:id="onConfirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #3498db; -fx-background-radius: 10; -fx-cursor: hand; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 10, 0, 0, 3);" text="Save Changes">
                      <font>
-                        <Font name="Plus Jakarta Sans SemiBold" size="24.0" />
+                        <Font name="Plus Jakarta Sans Bold" size="16.0" />
                      </font>
-                  </Label>
-                  <PasswordField fx:id="newPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Type new Password" style="-fx-border-color: #BECEF0; -fx-border-radius: 4; -fx-background-color: transparent; -fx-cursor: text;" styleClass="input" stylesheets="@ImageLoginScreen/PassCustum.css">
                      <HBox.margin>
-                        <Insets left="96.0" />
+                        <Insets bottom="20.0" />
                      </HBox.margin>
-                     <font>
-                        <Font name="Plus Jakarta Sans Medium" size="14.0" />
-                     </font>
-                  </PasswordField>
+                  </Button>
                </children>
-               <VBox.margin>
-                  <Insets left="50.0" top="20.0" />
-               </VBox.margin>
             </HBox>
-            <Button fx:id="onConfirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="40.0" prefWidth="150.0" styleClass="custom-button" stylesheets="@TaskScreen/NewTaskButtonCustom.css" text="Confirm">
-               <font>
-                  <Font name="Plus Jakarta Sans SemiBold" size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="270.0" top="40.0" />
-               </VBox.margin>
-            </Button>
          </children>
       </VBox>
    </children>

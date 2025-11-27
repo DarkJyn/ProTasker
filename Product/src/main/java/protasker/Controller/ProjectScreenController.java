@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import protasker.Model.Project;
 import protasker.Model.User;
+import protasker.Model.DataStore;
+import protasker.Model.FileContact;
+import protasker.Model.Task;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +32,13 @@ public class ProjectScreenController{
     private Label taskScreen;
 
     private User currentUser;
+    private DataStore dataStore;
     private ArrayList<Project> projects = new ArrayList<>();
 
     public void setCurrentUser(User currentUser) throws IOException {
         this.currentUser = currentUser;
-        projects = currentUser.getProjects();
+        this.dataStore = FileContact.loadDataStore();
+        projects = (ArrayList<Project>) dataStore.getUserProjects(currentUser.getUserId());
         System.out.println("set user in project screen successful");
         loadProjects();
     }
@@ -51,6 +56,13 @@ public class ProjectScreenController{
             vbox.getChildren().add(hbox);
         }
     }
+    
+    // Phương thức này reload dữ liệu từ DataStore và cập nhật UI
+    public void refreshProjects() throws IOException {
+        this.dataStore = FileContact.loadDataStore();
+        this.projects = (ArrayList<Project>) dataStore.getUserProjects(currentUser.getUserId());
+        loadProjects();
+    }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/DashBoard/dash-board.fxml"));
@@ -58,7 +70,7 @@ public class ProjectScreenController{
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) overviewLabelInDashBoard.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     private Label logOut;
@@ -66,7 +78,7 @@ public class ProjectScreenController{
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     void onProfileScreenClick(MouseEvent event) throws IOException {
@@ -75,7 +87,7 @@ public class ProjectScreenController{
         ProfileScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) profileScreen.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 
     @FXML
@@ -85,7 +97,7 @@ public class ProjectScreenController{
         TaskScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) taskScreen.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 
     @FXML
@@ -109,7 +121,7 @@ public class ProjectScreenController{
     }
 
     public void onProgressButtonClick(ActionEvent actionEvent) throws IOException {
-        projects.sort(Comparator.comparingInt(Project::getProgressAsInt));
+        projects.sort(Comparator.comparingInt(p -> p.getProgressAsInt((ArrayList<Task>)dataStore.getProjectTasks(p.getProjectId()))));
         loadProjects();
     }
     public void onPriorityButtonClick(ActionEvent actionEvent) throws IOException {

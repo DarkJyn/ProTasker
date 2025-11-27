@@ -11,14 +11,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import protasker.Model.DataStore;
 import protasker.Model.Project;
+import protasker.Model.Task;
 import protasker.Model.User;
-import protasker.Model.UserInfo;
+import protasker.Model.FileContact;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class ProjectHboxController {
 
@@ -42,16 +45,10 @@ public class ProjectHboxController {
 
     Project project;
     User leader;
-    UserInfo leaderInfo;
     public static String formatDate(String inputDate) {
-        // Định dạng ban đầu
         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        // Định dạng mong muốn
         DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("MMM dd");
-
-        // Chuyển đổi chuỗi thành LocalDate
         LocalDate date = LocalDate.parse(inputDate, inputFormatter);
-        // Định dạng lại thành "MMM dd"
         return date.format(outputFormatter);
     }
     void setCurrentUser(User user) {
@@ -60,9 +57,10 @@ public class ProjectHboxController {
     void setProject(Project project) {
         System.out.println(project == null);
         this.project = project;
-        leaderInfo = project.getLeader();
-        this.project.setProgress();
-        progressLabel.setText(this.project.getProgress() + "%");
+        DataStore dataStore = FileContact.loadDataStore();
+        ArrayList<Task> tasks = (ArrayList<Task>) dataStore.getProjectTasks(project.getProjectId());
+        int progress = this.project.getProgressAsInt(tasks);
+        progressLabel.setText(progress + "%");
         System.out.println("set project hbox done");
     }
 
@@ -70,11 +68,31 @@ public class ProjectHboxController {
         projectNameLabel.setText(project.getName());
         priorityLabel.setText(project.getPriority());
         targetDateLabel.setText(formatDate(project.getTargetDate()));
-        progressLabel.setText(project.getProgress());
-        File file = new File(leader.getUserAvatarPath());
-        Image image = new Image(file.toURI().toString());
-        avatarImg.setImage(image);
-//        avatarImg.setImage(new Image("D:\\Dean'sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"));
+        
+        DataStore dataStore = FileContact.loadDataStore();
+        ArrayList<Task> tasks = (ArrayList<Task>) dataStore.getProjectTasks(project.getProjectId());
+        int progress = project.getProgressAsInt(tasks);
+        progressLabel.setText(progress + "%");
+        
+        User projectLeader = dataStore.getUsers().stream()
+            .filter(u -> u.getUserId().equals(project.getLeaderId()))
+            .findFirst().orElse(null);
+        
+        if(projectLeader != null) {
+            if(projectLeader.getUserAvatarPath() != null && !projectLeader.getUserAvatarPath().isEmpty()) {
+                try {
+                    File file = new File(projectLeader.getUserAvatarPath());
+                    Image image = new Image(file.toURI().toString());
+                    avatarImg.setImage(image);
+                } catch (Exception e) {
+                    Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                    avatarImg.setImage(defaultImage);
+                }
+            } else {
+                Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                avatarImg.setImage(defaultImage);
+            }
+        }
     }
 
     @FXML
@@ -85,6 +103,6 @@ public class ProjectHboxController {
         controller.setCurrentUser(leader);
         controller.setProject(project);
         Stage stage = (Stage) projectHbox.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 }

@@ -15,8 +15,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import protasker.Model.FileContact;
+import protasker.Model.DataStore;
 import protasker.Model.User;
+import protasker.Model.FileContact;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -25,12 +26,49 @@ public class ProfileScreenController {
 
     @FXML
     private Label overviewLabelInDashBoard;
+    
+    @FXML
+    private Label userNameLabel;
+    
+    @FXML
+    private Label taskCompletedLabel;
+    
     private User currentUser;
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
-        File file = new File(currentUser.getUserAvatarPath());
-        Image image = new Image(file.toURI().toString());
-        avatarUser.setImage(image);
+        
+        // Hiển thị tên user
+        userNameLabel.setText(currentUser.getUsername());
+        
+        // Tính % task hoàn thành
+        DataStore dataStore = FileContact.loadDataStore();
+        List<protasker.Model.Task> userTasks = dataStore.getUserTasks(currentUser.getUserId());
+        int totalTasks = userTasks.size();
+        int completedTasks = 0;
+        
+        for(protasker.Model.Task task : userTasks) {
+            if(task.getStatus().equals("Done")) {
+                completedTasks++;
+            }
+        }
+        
+        double percentage = totalTasks > 0 ? (completedTasks * 100.0 / totalTasks) : 0;
+        taskCompletedLabel.setText(String.format("%.1f%%", percentage));
+        
+        // Load avatar
+        if(currentUser.getUserAvatarPath() != null && !currentUser.getUserAvatarPath().isEmpty()) {
+            try {
+                File file = new File(currentUser.getUserAvatarPath());
+                Image image = new Image(file.toURI().toString());
+                avatarUser.setImage(image);
+            } catch (Exception e) {
+                Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+                avatarUser.setImage(defaultImage);
+            }
+        } else {
+            Image defaultImage = new Image(getClass().getResourceAsStream("/View/avt_defaul.jpg"));
+            avatarUser.setImage(defaultImage);
+        }
     }
     @FXML
     void onOverviewClick(MouseEvent event) throws IOException {
@@ -39,7 +77,7 @@ public class ProfileScreenController {
         DashBoardController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) overviewLabelInDashBoard.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     private Label projectScreen;
@@ -53,7 +91,7 @@ public class ProfileScreenController {
     void onLogOutClick(MouseEvent event) throws IOException {
         Stage stage = (Stage) logOut.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     void onProjectClick(MouseEvent event) throws IOException{
@@ -62,7 +100,7 @@ public class ProfileScreenController {
         ProjectScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) projectScreen.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 
     @FXML
@@ -72,7 +110,7 @@ public class ProfileScreenController {
         TaskScreenController controller = loader.getController();
         controller.setCurrentUser(currentUser);
         Stage stage = (Stage) taskScreen.getScene().getWindow();
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
     @FXML
     private ImageView avatarUser;
@@ -96,9 +134,10 @@ public class ProfileScreenController {
             String imagePath = file.getAbsolutePath();
             currentUser.setUserAvatarPath(imagePath);
             System.out.println(imagePath);
-            Image image = new Image(file.toURI().toString()); // Chuyển path thành URI
+            Image image = new Image(file.toURI().toString());
             avatarUser.setImage(image);
-            FileContact.saveUsersToJson(currentUser);
+            DataStore dataStore = FileContact.loadDataStore();
+            FileContact.updateUser(dataStore, currentUser);
         }
     }
     @FXML
@@ -111,28 +150,28 @@ public class ProfileScreenController {
     private TextField usernameTextField;
     @FXML
     void onConfirmButtonClick(ActionEvent event) throws IOException {
-        List<User> usersList = FileContact.loadUserFromJson();
-        for (User user : usersList){
-            if (user.getUsername().equals(currentUser.getUsername())){
-                if(usernameTextField.getText() != null && oldPasswordField.getText().equals(user.getPassword()) && newPasswordField.getText() != null ){
-                    currentUser.setUsername(usernameTextField.getText());
-                    currentUser.setPassword(newPasswordField.getText());
-                    System.out.println("Change User info done");
-                }
-//                user.setUserAvatarPath(currentUser.getUserAvatarPath());
+        DataStore dataStore = FileContact.loadDataStore();
+        User user = dataStore.getUsers().stream()
+            .filter(u -> u.getUserId().equals(currentUser.getUserId()))
+            .findFirst().orElse(null);
+        
+        if(user != null) {
+            if(usernameTextField.getText() != null && !usernameTextField.getText().isEmpty() 
+               && oldPasswordField.getText().equals(user.getPassword()) 
+               && newPasswordField.getText() != null && !newPasswordField.getText().isEmpty()){
+                currentUser.setUsername(usernameTextField.getText());
+                currentUser.setPassword(newPasswordField.getText());
                 user.setUsername(currentUser.getUsername());
                 user.setPassword(currentUser.getPassword());
-//                user.setProjects(currentUser.getProjects());
-//                user.setTasksList(currentUser.getTasksList());
-                break;
+                FileContact.updateUser(dataStore, user);
+                System.out.println("Change User info done");
             }
         }
-        FileContact.writeUsersToJson(usersList);
         newPasswordField.clear();
         oldPasswordField.clear();
         usernameTextField.clear();
         Stage stage = (Stage) logOut.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/View/LogInAndSignUp/login-screen.fxml"));
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(new Scene(root, 1100, 750));
     }
 }

@@ -1,389 +1,247 @@
-[
-  {
-    "username": "admin",
-    "password": "a",
-    "projects": [
-      {
-        "name": "SeaBattle",
-        "priority": "Medium",
-        "description": "First Console Game made by Java\n",
-        "leader": {
-          "name": "a",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2024-12-09",
-        "TargetDate": "2025-02-08",
-        "tasks": [
-          {
-            "name": "Draw UML",
-            "description": "",
-            "status": "Done",
-            "projectOwn": "SeaBattle",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Code Logic",
-            "description": "",
-            "status": "Done",
-            "projectOwn": "SeaBattle",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "High"
-          }
-        ],
-        "progress": "100%",
-        "searchValue": true
-      },
-      {
-        "name": "ProTasker",
-        "priority": "High",
-        "description": "First App made by Java",
-        "leader": {
-          "name": "a",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2025-03-02",
-        "TargetDate": "2025-03-23",
-        "tasks": [
-          {
-            "name": "Draw UML",
-            "description": "Draw Class Diagram and Activity Diagram",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Make UI",
-            "description": "Design UI for ProTasker",
-            "status": "Done",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Medium"
-          },
-          {
-            "name": "Code Flow and Logic",
-            "description": "Back code",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "High"
-          },
-          {
-            "name": "Make Database",
-            "description": "JSON file",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "High"
-          },
-          {
-            "name": "a",
-            "description": "a",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "C:\\Users\\ADMIN\\Downloads\\z6404420434409_693d624ec7200a0aacd0f4636e2df43e.jpg"
-            },
-            "priority": "Low"
-          }
-        ],
-        "progress": "20%",
-        "searchValue": true
-      },
-      {
-        "name": "C++_CODEPTIT repo",
-        "priority": "Medium",
-        "description": "Solve all C++ task\n",
-        "leader": {
-          "name": "a",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2025-03-02",
-        "TargetDate": "2025-03-31",
-        "tasks": [],
-        "progress": "0%",
-        "searchValue": true
-      },
-      {
-        "name": "DSA_PTIT repos",
-        "priority": "Low",
-        "description": "Solve all DSA task in CodePTIT ",
-        "leader": {
-          "name": "a",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2025-03-21",
-        "TargetDate": "2025-05-31",
-        "tasks": [
-          {
-            "name": "Solve DSA001",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "DSA_PTIT repos",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Solve DSA002",
-            "description": "",
-            "status": "Done",
-            "projectOwn": "DSA_PTIT repos",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Solve DSA003",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "DSA_PTIT repos",
-            "userOwn": {
-              "name": "a",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          }
-        ],
-        "progress": "33%",
-        "searchValue": true
-      }
-    ],
-    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-  },
-  {
-    "username": "b",
-    "password": "b",
-    "projects": [],
-    "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-  },
-  {
-    "username": "a",
-    "password": "c",
-    "projects": [],
-    "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-  },
-  {
-    "username": "dangvu",
-    "password": "a",
-    "projects": [
-      {
-        "name": "SeaBattle",
-        "priority": "Medium",
-        "description": "console game\n",
-        "leader": {
-          "name": "admin1",
-          "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-        },
-        "StartDate": "2025-03-02",
-        "TargetDate": "2025-03-04",
-        "tasks": [
-          {
-            "name": "Task 1 ",
-            "description": "tesst",
-            "status": "Done",
-            "projectOwn": "SeaBattle",
-            "userOwn": {
-              "name": "admin1",
-              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-            },
-            "priority": "Low"
-          }
-        ],
-        "progress": "100%",
-        "searchValue": true
-      },
-      {
-        "name": "ProTasker",
-        "priority": "High",
-        "description": "Make a JavaApp",
-        "leader": {
-          "name": "admin1",
-          "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-        },
-        "StartDate": "2025-03-03",
-        "TargetDate": "2025-03-24",
-        "tasks": [
-          {
-            "name": "Make UI",
-            "description": "a",
-            "status": "Done",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin1",
-              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-            },
-            "priority": "High"
-          },
-          {
-            "name": "First Task",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin1",
-              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Code Logic",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin1",
-              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-            },
-            "priority": "High"
-          }
-        ],
-        "progress": "33%",
-        "searchValue": true
-      },
-      {
-        "name": "Clear CodePTIT",
-        "priority": "Medium",
-        "description": "DSA PTIT",
-        "leader": {
-          "name": "admin1",
-          "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-        },
-        "StartDate": "2025-02-25",
-        "TargetDate": "2025-06-30",
-        "tasks": [
-          {
-            "name": "Solve DSA001",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "Clear CodePTIT",
-            "userOwn": {
-              "name": "admin1",
-              "imagePath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-            },
-            "priority": "High"
-          }
-        ],
-        "progress": "0%",
-        "searchValue": true
-      }
-    ],
-    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\4498b6ef6034c4402a35ebdb757c9df9.jpg"
-  },
-  {
-    "username": "haidang",
-    "password": "dang",
-    "projects": [
-      {
-        "name": "ProTasker",
-        "priority": "High",
-        "description": "BTCK ProJApp",
-        "leader": {
-          "name": "admin0",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2025-02-23",
-        "TargetDate": "2025-03-24",
-        "tasks": [
-          {
-            "name": "Make UI",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin0",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Medium"
-          },
-          {
-            "name": "CodeLogic",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin0",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "High"
-          },
-          {
-            "name": "Draw UML",
-            "description": "",
-            "status": "Done",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin0",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          },
-          {
-            "name": "Update Logic",
-            "description": "",
-            "status": "In Progress",
-            "projectOwn": "ProTasker",
-            "userOwn": {
-              "name": "admin0",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "High"
-          }
-        ],
-        "progress": "25%",
-        "searchValue": true
-      },
-      {
-        "name": "Project Mini",
-        "priority": "Low",
-        "description": "a",
-        "leader": {
-          "name": "admin0",
-          "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-        },
-        "StartDate": "2025-02-24",
-        "TargetDate": "2025-04-01",
-        "tasks": [
-          {
-            "name": "Task random",
-            "description": "a",
-            "status": "Done",
-            "projectOwn": "Project Mini",
-            "userOwn": {
-              "name": "admin0",
-              "imagePath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\ImageDashBoard\\avatar2.jpg"
-            },
-            "priority": "Low"
-          }
-        ],
-        "progress": "100%",
-        "searchValue": true
-      }
-    ],
-    "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\485405279_1214417153385731_7555288643157993212_n.jpg"
-  }
-]
+{
+  "users": [
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "username": "a",
+      "password": "a",
+      "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\Screenshot 2025-11-20 051730.png"
+    },
+    {
+      "userId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "username": "admin",
+      "password": "a",
+      "userAvatarPath": "C:\\Users\\ADMIN\\Downloads\\avatar-lg-2.jpg"
+    },
+    {
+      "userId": "e94b42ed-c997-43e5-87fa-895d3e068b21",
+      "username": "b",
+      "password": "b",
+      "userAvatarPath": "D:\\Dean\u0027sCode\\PROPTIT\\OOP-Java\\ProTasker\\Product\\src\\main\\resources\\View\\avt_defaul.jpg"
+    },
+    {
+      "userId": "26adfa16-b804-432f-aaae-3236f71a7286",
+      "username": "c",
+      "password": "c"
+    }
+  ],
+  "projects": [
+    {
+      "projectId": "7c2f370a-a926-4f3c-9f0e-a8b0877aebe7",
+      "name": "a",
+      "priority": "Low",
+      "description": "a",
+      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "startDate": "2025-11-04",
+      "targetDate": "2025-11-11",
+      "searchValue": true
+    },
+    {
+      "projectId": "969149ba-0f92-4343-96b2-b9807f2c98f3",
+      "name": "ấdasdasd",
+      "priority": "Medium",
+      "description": "ádasdasd",
+      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "startDate": "2025-11-04",
+      "targetDate": "2025-10-27",
+      "searchValue": true
+    },
+    {
+      "projectId": "9256b777-b51f-41e6-a648-c8e438f4c76e",
+      "name": "1111ádasd",
+      "priority": "Low",
+      "description": "a",
+      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "startDate": "2025-11-04",
+      "targetDate": "2025-11-11",
+      "searchValue": true
+    },
+    {
+      "projectId": "f930bda6-b41b-4056-86a7-8092f4479b7b",
+      "name": "a",
+      "priority": "Low",
+      "description": "a",
+      "leaderId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "startDate": "2025-11-02",
+      "targetDate": "2025-11-13",
+      "searchValue": true
+    },
+    {
+      "projectId": "ce0246ea-27fe-4109-92c4-0c1cd5528f2a",
+      "name": "hehehee",
+      "priority": "Low",
+      "description": "a",
+      "leaderId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "startDate": "2025-11-05",
+      "targetDate": "2025-11-04",
+      "searchValue": true
+    },
+    {
+      "projectId": "daacf42a-1a76-44d3-a275-b4aa23cd0969",
+      "name": "bbb",
+      "priority": "Low",
+      "description": "b",
+      "leaderId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "startDate": "2025-11-04",
+      "targetDate": "2025-11-27",
+      "searchValue": true
+    },
+    {
+      "projectId": "be65c94d-59f2-45ca-a196-1ba4ae1210f3",
+      "name": "c",
+      "priority": "Medium",
+      "description": "c",
+      "leaderId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "startDate": "2025-10-27",
+      "targetDate": "2025-11-29",
+      "searchValue": true
+    },
+    {
+      "projectId": "cc70646e-a635-4299-9d1a-6456e2cc80ef",
+      "name": "aaaaaaaaaa",
+      "priority": "Medium",
+      "description": "a",
+      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "startDate": "2025-10-28",
+      "targetDate": "2025-11-03",
+      "searchValue": true
+    },
+    {
+      "projectId": "c8811b5e-5011-4907-9f55-b460722082be",
+      "name": "haihai",
+      "priority": "Low",
+      "description": "",
+      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "startDate": "2025-10-27",
+      "targetDate": "2025-11-28",
+      "searchValue": true
+    },
+    {
+      "projectId": "d34bd06f-5634-4c81-a98b-fc871f971593",
+      "name": "Test MultiUser",
+      "priority": "High",
+      "description": "",
+      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "startDate": "2025-10-27",
+      "targetDate": "2025-11-26",
+      "searchValue": true
+    }
+  ],
+  "userProjects": [
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "projectId": "7c2f370a-a926-4f3c-9f0e-a8b0877aebe7",
+      "role": "owner"
+    },
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "projectId": "969149ba-0f92-4343-96b2-b9807f2c98f3",
+      "role": "owner"
+    },
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "projectId": "9256b777-b51f-41e6-a648-c8e438f4c76e",
+      "role": "owner"
+    },
+    {
+      "userId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "projectId": "f930bda6-b41b-4056-86a7-8092f4479b7b",
+      "role": "owner"
+    },
+    {
+      "userId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "projectId": "ce0246ea-27fe-4109-92c4-0c1cd5528f2a",
+      "role": "owner"
+    },
+    {
+      "userId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "projectId": "daacf42a-1a76-44d3-a275-b4aa23cd0969",
+      "role": "owner"
+    },
+    {
+      "userId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "projectId": "be65c94d-59f2-45ca-a196-1ba4ae1210f3",
+      "role": "owner"
+    },
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "projectId": "cc70646e-a635-4299-9d1a-6456e2cc80ef",
+      "role": "owner"
+    },
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "projectId": "c8811b5e-5011-4907-9f55-b460722082be",
+      "role": "owner"
+    },
+    {
+      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "projectId": "d34bd06f-5634-4c81-a98b-fc871f971593",
+      "role": "owner"
+    },
+    {
+      "userId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "projectId": "d34bd06f-5634-4c81-a98b-fc871f971593",
+      "role": "member"
+    },
+    {
+      "userId": "e94b42ed-c997-43e5-87fa-895d3e068b21",
+      "projectId": "d34bd06f-5634-4c81-a98b-fc871f971593",
+      "role": "member"
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": "0058188f-c77f-4757-bdf6-8c83ee96ce4b",
+      "name": "a",
+      "description": "a",
+      "status": "Done",
+      "projectId": "969149ba-0f92-4343-96b2-b9807f2c98f3",
+      "assignedUserId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "priority": "Medium"
+    },
+    {
+      "taskId": "bca87e08-a9e2-4607-a1cc-2cfb08e3dbbc",
+      "name": "bbba",
+      "description": "a",
+      "status": "In Progress",
+      "projectId": "cc70646e-a635-4299-9d1a-6456e2cc80ef",
+      "assignedUserId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "priority": "Medium"
+    },
+    {
+      "taskId": "feae1e58-fda3-4582-a3e6-d21e5ac3b1c1",
+      "name": "a",
+      "description": "a",
+      "status": "In Progress",
+      "projectId": "ce0246ea-27fe-4109-92c4-0c1cd5528f2a",
+      "assignedUserId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "priority": "Medium"
+    },
+    {
+      "taskId": "f258d5d8-5738-40df-a562-aeea9a2c0202",
+      "name": "b",
+      "description": "",
+      "status": "Done",
+      "projectId": "f930bda6-b41b-4056-86a7-8092f4479b7b",
+      "assignedUserId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
+      "priority": "Medium"
+    },
+    {
+      "taskId": "13ff75a4-75ec-435c-9f86-eb650f5951e4",
+      "name": "a",
+      "description": "",
+      "status": "Done",
+      "projectId": "7c2f370a-a926-4f3c-9f0e-a8b0877aebe7",
+      "assignedUserId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
+      "priority": "Low"
+    },
+    {
+      "taskId": "4c3024ac-493c-48f3-91b9-429211663a18",
+      "name": "b mission",
+      "description": "a",
+      "status": "In Progress",
+      "projectId": "d34bd06f-5634-4c81-a98b-fc871f971593",
+      "assignedUserId": "e94b42ed-c997-43e5-87fa-895d3e068b21",
+      "priority": "Low"
+    }
+  ]
+}
