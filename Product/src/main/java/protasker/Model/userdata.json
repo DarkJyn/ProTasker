@@ -26,26 +26,6 @@
   ],
   "projects": [
     {
-      "projectId": "7c2f370a-a926-4f3c-9f0e-a8b0877aebe7",
-      "name": "a",
-      "priority": "Low",
-      "description": "a",
-      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
-      "startDate": "2025-11-04",
-      "targetDate": "2025-11-11",
-      "searchValue": true
-    },
-    {
-      "projectId": "969149ba-0f92-4343-96b2-b9807f2c98f3",
-      "name": "ấdasdasd",
-      "priority": "Medium",
-      "description": "ádasdasd",
-      "leaderId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
-      "startDate": "2025-11-04",
-      "targetDate": "2025-10-27",
-      "searchValue": true
-    },
-    {
       "projectId": "9256b777-b51f-41e6-a648-c8e438f4c76e",
       "name": "1111ádasd",
       "priority": "Low",
@@ -129,16 +109,6 @@
   "userProjects": [
     {
       "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
-      "projectId": "7c2f370a-a926-4f3c-9f0e-a8b0877aebe7",
-      "role": "owner"
-    },
-    {
-      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
-      "projectId": "969149ba-0f92-4343-96b2-b9807f2c98f3",
-      "role": "owner"
-    },
-    {
-      "userId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
       "projectId": "9256b777-b51f-41e6-a648-c8e438f4c76e",
       "role": "owner"
     },
@@ -190,15 +160,6 @@
   ],
   "tasks": [
     {
-      "taskId": "0058188f-c77f-4757-bdf6-8c83ee96ce4b",
-      "name": "a",
-      "description": "a",
-      "status": "Done",
-      "projectId": "969149ba-0f92-4343-96b2-b9807f2c98f3",
-      "assignedUserId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
-      "priority": "Medium"
-    },
-    {
       "taskId": "bca87e08-a9e2-4607-a1cc-2cfb08e3dbbc",
       "name": "bbba",
       "description": "a",
@@ -224,15 +185,6 @@
       "projectId": "f930bda6-b41b-4056-86a7-8092f4479b7b",
       "assignedUserId": "a45a4fe4-bae0-41c6-9fb3-756422521cba",
       "priority": "Medium"
-    },
-    {
-      "taskId": "13ff75a4-75ec-435c-9f86-eb650f5951e4",
-      "name": "a",
-      "description": "",
-      "status": "Done",
-      "projectId": "7c2f370a-a926-4f3c-9f0e-a8b0877aebe7",
-      "assignedUserId": "b219e4c6-c40b-4f12-9e7a-f083371193f9",
-      "priority": "Low"
     },
     {
       "taskId": "4c3024ac-493c-48f3-91b9-429211663a18",

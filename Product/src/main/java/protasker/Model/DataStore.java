@@ -134,4 +134,21 @@ public class DataStore {
                 .filter(u -> !projectMemberIds.contains(u.getUserId()))
                 .collect(Collectors.toList());
     }
+
+    // Xóa project cùng với tất cả tasks và user-project relationships liên quan
+    public void deleteProject(String projectId) {
+        // Xóa tất cả tasks của project
+        tasks.removeIf(t -> t.getProjectId().equals(projectId));
+        
+        // Xóa tất cả user-project relationships
+        userProjects.removeIf(up -> up.getProjectId().equals(projectId));
+        
+        // Xóa project
+        projects.removeIf(p -> p.getProjectId().equals(projectId));
+    }
+
+    // Xóa task theo taskId
+    public void deleteTask(String taskId) {
+        tasks.removeIf(t -> t.getTaskId().equals(taskId));
+    }
 }

@@ -53,6 +53,7 @@ public class ProjectScreenController{
             controller.setCurrentUser(currentUser);
             controller.setProject(project);
             controller.setData(project);
+            controller.setProjectScreenController(this); // Để có thể refresh sau khi xóa project
             vbox.getChildren().add(hbox);
         }
     }
